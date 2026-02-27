@@ -16,4 +16,5 @@ frontend/.angular/
 
 # ─── Environment ────────────────────────
 *.env
-application-prod.yml
+application-prod.yml.DS_Store
+**/.DS_Store
