@@ -18,3 +18,5 @@ frontend/.angular/
 *.env
 application-prod.yml.DS_Store
 **/.DS_Store
+.DS_Store
+**/.DS_Store
