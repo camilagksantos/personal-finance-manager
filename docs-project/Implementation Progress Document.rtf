@@ -1,33 +1,36 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2868
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red109\green109\blue109;\red0\green0\blue233;
+{\colortbl;\red255\green255\blue255;\red109\green109\blue109;\red0\green0\blue233;\red0\green0\blue0;
 }
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c50196\c50196\c50196;\cssrgb\c0\c0\c93333;
+{\*\expandedcolortbl;;\cssrgb\c50196\c50196\c50196;\cssrgb\c0\c0\c93333;\cssrgb\c0\c0\c0;
 }
-{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww13660\viewh17660\viewkind0
 \deftab720
 \pard\pardeftab720\sa321\partightenfactor0
 
 \f0\b\fs48 \cf0 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Personal Finance Management System\
+Personal Finance Management System\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f1\b0\fs24 \cf0 Backend \'97 Implementation Progress Document\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf2 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 \strokec2 1. Implemented Areas\
-\pard\pardeftab720\sa240\partightenfactor0
+\f0\b\fs36 \cf0 1. Implemented Areas\
+\pard\pardeftab720\partightenfactor0
 
 \f1\b0\fs24 \cf0 Database Migrations\uc0\u8232 Application Profiles (YMLs)\u8232 Infrastructure Configs\u8232 Domain Exceptions\u8232 Domain Models\u8232 JPA Entities\
+Output Ports\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Input Ports (Use Cases)\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf2 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 \strokec2 2. Database Migrations\
+\f0\b\fs36 \cf0 2. Database Migrations\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f1\b0\fs24 \cf0 Location\uc0\u8232 src/main/resources/db/migration\
@@ -38,17 +41,17 @@ V3__create_transactions_table.sql\uc0\u8232 Creates transactions table with fore
 V4__create_reports_table.sql\uc0\u8232 Creates reports table with BYTEA column for PDF content\
 V5__create_indexes.sql\uc0\u8232 Indexes:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
-\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 transactions(account_id)\
-\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 transactions(date)\
-\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 accounts(user_id)\
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+transactions(account_id)\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+transactions(date)\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+accounts(user_id)\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf2 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 \strokec2 3. Application Profiles\
+\f0\b\fs36 \cf0 3. Application Profiles\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f1\b0\fs24 \cf0 Location\uc0\u8232 src/main/resources\
@@ -57,36 +60,36 @@ Default profile: dev\uc0\u8232 Flyway enabled\u8232 Migration location: classpat
 Swagger\uc0\u8232 Swagger UI: /swagger-ui.html\u8232 API docs: /api-docs\
 Client secret loaded from environment variable:\uc0\u8232 $\{OAUTH2_CLIENT_SECRET\}\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf2 \
 \pard\pardeftab720\sa240\partightenfactor0
-\cf0 \strokec2 application-dev.yml\
+\cf0 application-dev.yml\
 Datasource: H2 in-memory\uc0\u8232 jdbc:h2:mem:financedb\
 H2 console:\uc0\u8232 /h2-console\
 JPA\uc0\u8232 ddl-auto: validate\u8232 show-sql: true\
 Logging level: DEBUG\
 Client secret:\uc0\u8232 finance-secret-dev\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf2 \
 \pard\pardeftab720\sa240\partightenfactor0
-\cf0 \strokec2 application-test.yml\
+\cf0 application-test.yml\
 Datasource: H2 in-memory\uc0\u8232 jdbc:h2:mem:testdb\
 JPA\uc0\u8232 ddl-auto: create-drop\
 Flyway disabled\
 Client secret:\uc0\u8232 finance-secret-test\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf2 \
 \pard\pardeftab720\sa240\partightenfactor0
-\cf0 \strokec2 application-prod.yml\
+\cf0 application-prod.yml\
 Datasource: PostgreSQL\
 Environment variables:\uc0\u8232 $\{DB_USERNAME\}\u8232 $\{DB_PASSWORD\}\
 JPA\uc0\u8232 ddl-auto: validate\u8232 show-sql: false\
 Hibernate dialect:\uc0\u8232 PostgreSQLDialect\
 Logging level:\uc0\u8232 INFO\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf2 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 \strokec2 4. Infrastructure Configs\
+\f0\b\fs36 \cf0 4. Infrastructure Configs\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f1\b0\fs24 \cf0 Location\uc0\u8232 src/main/java/com/camilagksantos/finance/infrastructure/config\
@@ -95,27 +98,27 @@ Permits:\uc0\u8232 Swagger\u8232 H2 console\u8232 Actuator\
 OAuth2 Resource Server with JWT\uc0\u8232 Session policy: STATELESS\
 Bean:\uc0\u8232 BCryptPasswordEncoder\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf2 \
 \pard\pardeftab720\sa240\partightenfactor0
-\cf0 \strokec2 AuthorizationServerConfig.java\
+\cf0 AuthorizationServerConfig.java\
 Client:\uc0\u8232 finance-client\
 Grant types:\uc0\u8232 AUTHORIZATION_CODE\u8232 REFRESH_TOKEN\
 Scopes:\uc0\u8232 openid\u8232 profile\u8232 finance.read\u8232 finance.write\
 Access token duration:\uc0\u8232 1 hour\
 Refresh token duration:\uc0\u8232 7 days\
 RSA key:\uc0\u8232 2048 bits generated in memory\
-Issuer:\uc0\u8232 {\field{\*\fldinst{HYPERLINK "http://localhost:8080/"}}{\fldrslt \cf4 \ul \ulc4 \strokec4 http://localhost:8080}}\
+Issuer:\uc0\u8232 {\field{\*\fldinst{HYPERLINK "http://localhost:8080/"}}{\fldrslt \cf3 \ul \ulc3 http://localhost:8080}}\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf2 \
 \pard\pardeftab720\sa240\partightenfactor0
-\cf0 \strokec2 OpenApiConfig.java\
+\cf0 OpenApiConfig.java\
 OAuth2 Authorization Code flow configured\
 Scopes:\uc0\u8232 finance.read\u8232 finance.write\u8232 openid\u8232 profile\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf2 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 \strokec2 5. Domain Exceptions\
+\f0\b\fs36 \cf0 5. Domain Exceptions\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f1\b0\fs24 \cf0 Location\uc0\u8232 src/main/java/com/camilagksantos/finance/domain/exception\
@@ -124,23 +127,23 @@ DomainException (RuntimeException)\
 ResourceNotFoundException\uc0\u8232 AccountNotFoundException\u8232 CategoryNotFoundException\u8232 TransactionNotFoundException\u8232 UserNotFoundException\
 BusinessRuleException\uc0\u8232 ReportGenerationException\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf2 \
 \pard\pardeftab720\sa240\partightenfactor0
-\cf0 \strokec2 ErrorResponse\
+\cf0 ErrorResponse\
 Factory method:\uc0\u8232 ErrorResponse.of(status, error, message, path)\
 Fields\
 timestamp\uc0\u8232 status\u8232 error\u8232 message\u8232 path\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf2 \
 \pard\pardeftab720\sa240\partightenfactor0
-\cf0 \strokec2 GlobalExceptionHandler\
+\cf0 GlobalExceptionHandler\
 Exception mapping\
 ResourceNotFoundException -> 404\uc0\u8232 BusinessRuleException -> 422\u8232 MethodArgumentNotValidException -> 400\u8232 Generic Exception -> 500\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf2 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 \strokec2 6. Domain Models\
+\f0\b\fs36 \cf0 6. Domain Models\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f1\b0\fs24 \cf0 Location\uc0\u8232 src/main/java/com/camilagksantos/finance/domain/model\
@@ -161,10 +164,10 @@ Audit timestamps use LocalDateTime:\uc0\u8232 createdAt\u8232 updatedAt\u8232 ge
 Report.content stored as:\uc0\u8232 byte[]\
 Mapped to:\uc0\u8232 PostgreSQL BYTEA\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf2 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 \strokec2 7. JPA Entities\
+\f0\b\fs36 \cf0 7. JPA Entities\
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f1\b0\fs24 \cf0 Location\uc0\u8232 src/main/java/com/camilagksantos/finance/adapters/outbound/persistence/entity\
@@ -177,4 +180,125 @@ ReportEntity\uc0\u8232 Table: reports\
 content stored as:\uc0\u8232 byte[]\u8232 Database type:\u8232 bytea\
 UserEntity\
 Does not exist\uc0\u8232 User is retrieved from external provider\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 8. Output Ports\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Location\uc0\u8232 src/main/java/com/camilagksantos/finance/domain/ports/output\
+\pard\pardeftab720\sa40\partightenfactor0
+
+\f0\b \cf0 AccountOutputPort
+\f1\b0 \
+\pard\tx566\pardeftab720\sa40\partightenfactor0
+\cf0 save\
+findById\
+findAllByUserId\
+deleteById\
+\
+\pard\pardeftab720\sa40\partightenfactor0
+
+\f0\b \cf0 CategoryOutputPort
+\f1\b0 \
+\pard\tx566\pardeftab720\sa40\partightenfactor0
+\cf0 save\
+findById\
+findAllByUserId\
+deleteById\
+\
+\pard\pardeftab720\sa40\partightenfactor0
+
+\f0\b \cf0 TransactionOutputPort
+\f1\b0 \
+\pard\tx566\pardeftab720\sa40\partightenfactor0
+\cf0 save\
+findById\
+findAllByAccountId\
+findAllByAccountIdAndDateBetween\
+deleteById\
+\
+\pard\pardeftab720\sa40\partightenfactor0
+
+\f0\b \cf0 ReportOutputPort
+\f1\b0 \
+\pard\tx566\pardeftab720\sa40\partightenfactor0
+\cf0 save\
+findById\
+findAllByUserId\
+deleteById\
+\
+\pard\pardeftab720\sa40\partightenfactor0
+
+\f0\b \cf0 UserOutputPort
+\f1\b0 \
+\pard\tx566\pardeftab720\sa40\partightenfactor0
+\cf0 findById\
+findAll\
+read-only (external source)\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 9. Input Ports (Use Cases)\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Location\uc0\u8232 src/main/java/com/camilagksantos/finance/domain/ports/input\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \outl0\strokewidth0 \strokec4 AccountUseCase 
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 create \
+getById \
+getAllByUserId \
+update \
+delete\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \
+
+\f0\b CategoryUseCase 
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 create \
+getById \
+getAllByUserId \
+update \
+delete\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \
+
+\f0\b TransactionUseCase 
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 create \
+getById \
+getAllByAccountId \
+getAllByAccountIdAndDateBetween \
+update \
+delete\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \
+
+\f0\b ReportUseCase 
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 generate \
+getById \
+getAllByUserId \
+delete No update \'97 reports are generated, not edited\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \
+
+\f0\b UserUseCase 
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 getById \
+getAll read-only (external source)\
+\pard\tx566\pardeftab720\sa40\partightenfactor0
+\cf0 \outl0\strokewidth0 \
+\pard\tx566\pardeftab720\sa40\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \outl0\strokewidth0 \strokec4 \
 }
