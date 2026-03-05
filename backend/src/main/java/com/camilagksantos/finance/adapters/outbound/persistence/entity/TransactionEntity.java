@@ -13,9 +13,6 @@ import java.util.UUID;
 @Table(name = "transactions")
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
 public class TransactionEntity {
 
     @Id

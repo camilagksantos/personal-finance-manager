@@ -11,9 +11,6 @@ import java.util.UUID;
 @Table(name = "categories")
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
 public class CategoryEntity {
 
     @Id

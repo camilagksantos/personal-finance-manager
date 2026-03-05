@@ -11,9 +11,6 @@ import java.util.UUID;
 @Table(name = "reports")
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
 public class ReportEntity {
 
     @Id
