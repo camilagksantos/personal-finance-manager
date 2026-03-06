@@ -1,6 +1,6 @@
 package com.camilagksantos.finance.adapters.outbound.persistence.adapter;
 
-import com.camilagksantos.finance.adapters.outbound.persistence.entity.ReportEntity;
+import com.camilagksantos.finance.adapters.outbound.persistence.mapper.ReportEntityMapper;
 import com.camilagksantos.finance.adapters.outbound.persistence.repository.ReportJpaRepository;
 import com.camilagksantos.finance.domain.model.Report;
 import com.camilagksantos.finance.domain.ports.output.ReportOutputPort;
@@ -14,54 +14,36 @@ import java.util.UUID;
 public class ReportPersistenceAdapter implements ReportOutputPort {
 
     private final ReportJpaRepository reportJpaRepository;
+    private final ReportEntityMapper reportEntityMapper;
 
-    public ReportPersistenceAdapter(ReportJpaRepository reportJpaRepository) {
+    public ReportPersistenceAdapter(ReportJpaRepository reportJpaRepository, ReportEntityMapper reportEntityMapper) {
         this.reportJpaRepository = reportJpaRepository;
+        this.reportEntityMapper = reportEntityMapper;
     }
 
     @Override
     public Report save(Report report) {
-        ReportEntity entity = toEntity(report);
-        ReportEntity saved = reportJpaRepository.save(entity);
-        return toDomain(saved);
+        return reportEntityMapper.toDomain(
+                reportJpaRepository.save(reportEntityMapper.toEntity(report))
+        );
     }
 
     @Override
     public Optional<Report> findById(UUID id) {
-        return reportJpaRepository.findById(id).map(this::toDomain);
+        return reportJpaRepository.findById(id)
+                .map(reportEntityMapper::toDomain);
     }
 
     @Override
     public List<Report> findAllByUserId(Long userId) {
         return reportJpaRepository.findAllByUserId(userId)
                 .stream()
-                .map(this::toDomain)
+                .map(reportEntityMapper::toDomain)
                 .toList();
     }
 
     @Override
     public void deleteById(UUID id) {
         reportJpaRepository.deleteById(id);
-    }
-
-    private ReportEntity toEntity(Report report) {
-        ReportEntity entity = new ReportEntity();
-        entity.setId(report.id());
-        entity.setUserId(report.userId());
-        entity.setTitle(report.title());
-        entity.setType(report.type());
-        entity.setGeneratedAt(report.generatedAt());
-        entity.setContent(null);
-        return entity;
-    }
-
-    private Report toDomain(ReportEntity entity) {
-        return new Report(
-                entity.getId(),
-                entity.getUserId(),
-                entity.getTitle(),
-                entity.getType(),
-                entity.getGeneratedAt()
-        );
     }
 }

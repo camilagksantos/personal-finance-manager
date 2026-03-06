@@ -1,6 +1,6 @@
 package com.camilagksantos.finance.adapters.outbound.persistence.adapter;
 
-import com.camilagksantos.finance.adapters.outbound.persistence.entity.AccountEntity;
+import com.camilagksantos.finance.adapters.outbound.persistence.mapper.AccountEntityMapper;
 import com.camilagksantos.finance.adapters.outbound.persistence.repository.AccountJpaRepository;
 import com.camilagksantos.finance.domain.model.Account;
 import com.camilagksantos.finance.domain.ports.output.AccountOutputPort;
@@ -14,57 +14,37 @@ import java.util.UUID;
 public class AccountPersistenceAdapter implements AccountOutputPort {
 
     private final AccountJpaRepository accountJpaRepository;
+    private final AccountEntityMapper accountEntityMapper;
 
-    public AccountPersistenceAdapter(AccountJpaRepository accountJpaRepository) {
+    public AccountPersistenceAdapter(AccountJpaRepository accountJpaRepository,
+                                     AccountEntityMapper accountEntityMapper) {
         this.accountJpaRepository = accountJpaRepository;
+        this.accountEntityMapper = accountEntityMapper;
     }
 
     @Override
     public Account save(Account account) {
-        AccountEntity entity = toEntity(account);
-        AccountEntity saved = accountJpaRepository.save(entity);
-        return toDomain(saved);
+        return accountEntityMapper.toDomain(
+                accountJpaRepository.save(accountEntityMapper.toEntity(account))
+        );
     }
 
     @Override
     public Optional<Account> findById(UUID id) {
-        return accountJpaRepository.findById(id).map(this::toDomain);
+        return accountJpaRepository.findById(id)
+                .map(accountEntityMapper::toDomain);
     }
 
     @Override
     public List<Account> findAllByUserId(Long userId) {
         return accountJpaRepository.findAllByUserId(userId)
                 .stream()
-                .map(this::toDomain)
+                .map(accountEntityMapper::toDomain)
                 .toList();
     }
 
     @Override
     public void deleteById(UUID id) {
         accountJpaRepository.deleteById(id);
-    }
-
-    private AccountEntity toEntity(Account account) {
-        AccountEntity entity = new AccountEntity();
-        entity.setId(account.id());
-        entity.setUserId(account.userId());
-        entity.setName(account.name());
-        entity.setType(account.type());
-        entity.setBalance(account.balance());
-        entity.setCreatedAt(account.createdAt());
-        entity.setUpdatedAt(account.updatedAt());
-        return entity;
-    }
-
-    private Account toDomain(AccountEntity entity) {
-        return new Account(
-                entity.getId(),
-                entity.getUserId(),
-                entity.getName(),
-                entity.getType(),
-                entity.getBalance(),
-                entity.getCreatedAt(),
-                entity.getUpdatedAt()
-        );
     }
 }
