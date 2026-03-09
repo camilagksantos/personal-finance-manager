@@ -20,7 +20,3 @@ spring:
 logging:
   level:
     com.camilagksantos: DEBUG
-
-app:
-  security:
-    client-secret: finance-secret-test

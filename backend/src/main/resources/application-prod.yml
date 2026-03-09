@@ -24,4 +24,3 @@ spring:
 logging:
   level:
     com.camilagksantos: INFO
-    org.springframework.security: WARN

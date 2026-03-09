@@ -26,8 +26,3 @@ spring:
 logging:
   level:
     com.camilagksantos: DEBUG
-    org.springframework.security: DEBUG
-
-app:
-  security:
-    client-secret: finance-secret-dev
