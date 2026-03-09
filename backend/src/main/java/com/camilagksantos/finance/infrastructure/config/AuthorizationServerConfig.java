@@ -1,5 +1,7 @@
 package com.camilagksantos.finance.infrastructure.config;
 
+import com.camilagksantos.finance.domain.model.UserCredentials;
+import com.camilagksantos.finance.domain.ports.input.UserCredentialsUseCase;
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jose.jwk.source.ImmutableJWKSet;
@@ -23,6 +25,8 @@ import org.springframework.security.oauth2.server.authorization.client.Registere
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClientRepository;
 import org.springframework.security.oauth2.server.authorization.settings.AuthorizationServerSettings;
 import org.springframework.security.oauth2.server.authorization.settings.TokenSettings;
+import org.springframework.security.oauth2.server.authorization.token.JwtEncodingContext;
+import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenCustomizer;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint;
 import org.springframework.security.web.util.matcher.MediaTypeRequestMatcher;
@@ -117,5 +121,17 @@ public class AuthorizationServerConfig {
         } catch (NoSuchAlgorithmException e) {
             throw new IllegalStateException("Failed to generate RSA key pair", e);
         }
+    }
+
+    @Bean
+    public OAuth2TokenCustomizer<JwtEncodingContext> jwtTokenCustomizer(
+            UserCredentialsUseCase userCredentialsUseCase) {
+        return context -> {
+            if (context.getPrincipal().getName() != null) {
+                UserCredentials credentials = userCredentialsUseCase
+                        .findByUsername(context.getPrincipal().getName());
+                context.getClaims().claim("userId", credentials.userId());
+            }
+        };
     }
 }
