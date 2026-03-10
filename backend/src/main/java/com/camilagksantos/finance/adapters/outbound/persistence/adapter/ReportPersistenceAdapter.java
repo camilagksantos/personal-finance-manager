@@ -1,5 +1,6 @@
 package com.camilagksantos.finance.adapters.outbound.persistence.adapter;
 
+import com.camilagksantos.finance.adapters.outbound.persistence.entity.ReportEntity;
 import com.camilagksantos.finance.adapters.outbound.persistence.mapper.ReportEntityMapper;
 import com.camilagksantos.finance.adapters.outbound.persistence.repository.ReportJpaRepository;
 import com.camilagksantos.finance.domain.model.Report;
@@ -23,9 +24,11 @@ public class ReportPersistenceAdapter implements ReportOutputPort {
 
     @Override
     public Report save(Report report) {
-        return reportEntityMapper.toDomain(
-                reportJpaRepository.save(reportEntityMapper.toEntity(report))
-        );
+        ReportEntity entity = reportEntityMapper.toEntity(report);
+        if (entity.getContent() == null) {
+            entity.setContent(new byte[0]);
+        }
+        return reportEntityMapper.toDomain(reportJpaRepository.save(entity));
     }
 
     @Override
