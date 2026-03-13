@@ -9,6 +9,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -25,7 +26,9 @@ class ReportMapperTest {
         ReportRequest request = new ReportRequest(
                 1L,
                 "Relatório Mensal",
-                Report.ReportType.MONTHLY_STATEMENT
+                Report.ReportType.MONTHLY_STATEMENT,
+                LocalDate.now().minusMonths(1),
+                LocalDate.now()
         );
 
         Report result = mapper.toDomain(request);
@@ -34,6 +37,8 @@ class ReportMapperTest {
         assertThat(result.userId()).isEqualTo(1L);
         assertThat(result.title()).isEqualTo("Relatório Mensal");
         assertThat(result.type()).isEqualTo(Report.ReportType.MONTHLY_STATEMENT);
+        assertThat(result.startDate()).isNotNull();
+        assertThat(result.endDate()).isNotNull();
         assertThat(result.id()).isNull();
         assertThat(result.generatedAt()).isNull();
     }
@@ -45,6 +50,8 @@ class ReportMapperTest {
                 1L,
                 "Relatório Mensal",
                 Report.ReportType.MONTHLY_STATEMENT,
+                LocalDate.now().minusMonths(1),
+                LocalDate.now(),
                 LocalDateTime.now()
         );
 
@@ -55,6 +62,8 @@ class ReportMapperTest {
         assertThat(result.userId()).isEqualTo(1L);
         assertThat(result.title()).isEqualTo("Relatório Mensal");
         assertThat(result.type()).isEqualTo(Report.ReportType.MONTHLY_STATEMENT);
+        assertThat(result.startDate()).isNotNull();
+        assertThat(result.endDate()).isNotNull();
         assertThat(result.generatedAt()).isNotNull();
     }
 }

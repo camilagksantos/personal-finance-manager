@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -38,6 +39,8 @@ class ReportPersistenceAdapterTest {
                 1L,
                 "Relatorio Mensal",
                 Report.ReportType.MONTHLY_STATEMENT,
+                LocalDate.now().minusMonths(1),
+                LocalDate.now(),
                 LocalDateTime.now()
         );
     }

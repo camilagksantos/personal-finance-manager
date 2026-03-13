@@ -28,6 +28,8 @@ public class ReportService implements ReportUseCase {
                     report.userId(),
                     report.title(),
                     report.type(),
+                    report.startDate(),
+                    report.endDate(),
                     LocalDateTime.now()
             );
             return reportOutputPort.save(newReport);

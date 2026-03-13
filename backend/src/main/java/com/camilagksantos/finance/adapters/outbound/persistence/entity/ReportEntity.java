@@ -4,6 +4,7 @@ import com.camilagksantos.finance.domain.model.Report;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -26,6 +27,12 @@ public class ReportEntity {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 50)
     private Report.ReportType type;
+
+    @Column(name = "start_date", nullable = false)
+    private LocalDate startDate;
+
+    @Column(name = "end_date", nullable = false)
+    private LocalDate endDate;
 
     @Column(name = "generated_at", nullable = false, updatable = false)
     private LocalDateTime generatedAt;

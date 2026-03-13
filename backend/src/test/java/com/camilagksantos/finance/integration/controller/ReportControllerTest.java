@@ -15,6 +15,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.WebApplicationContext;
 
+import java.time.LocalDate;
 import java.util.UUID;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -41,7 +42,9 @@ class ReportControllerTest {
         ReportRequest validRequest = new ReportRequest(
                 1L,
                 "Relatório Mensal",
-                ReportType.MONTHLY_STATEMENT
+                ReportType.MONTHLY_STATEMENT,
+                LocalDate.now().minusMonths(1),
+                LocalDate.now()
         );
 
         String response = mockMvc.perform(post("/api/v1/reports")
@@ -58,7 +61,9 @@ class ReportControllerTest {
         ReportRequest request = new ReportRequest(
                 1L,
                 "Despesas por Categoria",
-                ReportType.EXPENSES_BY_CATEGORY
+                ReportType.EXPENSES_BY_CATEGORY,
+                LocalDate.now().minusMonths(1),
+                LocalDate.now()
         );
 
         mockMvc.perform(post("/api/v1/reports")
