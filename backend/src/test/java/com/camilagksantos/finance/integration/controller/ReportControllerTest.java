@@ -32,14 +32,13 @@ class ReportControllerTest {
             .registerModule(new JavaTimeModule());
 
     private MockMvc mockMvc;
-    private ReportRequest validRequest;
     private String createdReportId;
 
     @BeforeEach
     void setUp() throws Exception {
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
 
-        validRequest = new ReportRequest(
+        ReportRequest validRequest = new ReportRequest(
                 1L,
                 "Relatório Mensal",
                 ReportType.MONTHLY_STATEMENT
