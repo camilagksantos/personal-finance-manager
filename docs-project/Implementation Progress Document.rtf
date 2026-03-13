@@ -1,304 +1,488 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2868
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;}
-{\colortbl;\red255\green255\blue255;\red109\green109\blue109;\red0\green0\blue233;\red0\green0\blue0;
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\fmodern\fcharset0 Courier;
 }
-{\*\expandedcolortbl;;\cssrgb\c50196\c50196\c50196;\cssrgb\c0\c0\c93333;\cssrgb\c0\c0\c0;
-}
-{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
-{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
-\paperw11900\paperh16840\margl1440\margr1440\vieww13660\viewh17660\viewkind0
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red109\green109\blue109;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c50196\c50196\c50196;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww13400\viewh17660\viewkind0
 \deftab720
 \pard\pardeftab720\sa321\partightenfactor0
 
 \f0\b\fs48 \cf0 \expnd0\expndtw0\kerning0
-Personal Finance Management System\
-\pard\pardeftab720\sa240\partightenfactor0
-
-\f1\b0\fs24 \cf0 Backend \'97 Implementation Progress Document\
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa298\partightenfactor0
-
-\f0\b\fs36 \cf0 1. Implemented Areas\
+\outl0\strokewidth0 \strokec2 Personal Finance Manager \'97 Implementation Progress Document\
 \pard\pardeftab720\partightenfactor0
 
-\f1\b0\fs24 \cf0 Database Migrations\uc0\u8232 Application Profiles (YMLs)\u8232 Infrastructure Configs\u8232 Domain Exceptions\u8232 Domain Models\u8232 JPA Entities\
-Output Ports\
+\f1\b0\fs24 \cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 1. Implemented Areas\
 \pard\pardeftab720\sa240\partightenfactor0
-\cf0 Input Ports (Use Cases)\
+
+\f1\b0\fs24 \cf0 \strokec2 \'95 Database Migrations\uc0\u8232 \'95 Application Profiles (YMLs)\u8232 \'95 Infrastructure Configs\u8232 \'95 Domain Exceptions\u8232 \'95 Domain Models\u8232 \'95 JPA Entities\u8232 \'95 Output Ports\u8232 \'95 Input Ports (Use Cases)\u8232 \'95 Domain Services\u8232 \'95 JPA Repositories\u8232 \'95 Persistence Adapters\u8232 \'95 External Adapters\u8232 \'95 DTOs (Request / Response)\u8232 \'95 Persistence Mappers (Entity \u8596  Domain)\u8232 \'95 Application Mappers (Request/Response \u8596  Domain)\u8232 \'95 REST Controllers\u8232 \'95 Unit Tests \'97 Domain Services\u8232 \'95 Unit Tests \'97 Application Mappers\u8232 \'95 Integration Tests \'97 Persistence Adapters\u8232 \'95 Integration Tests \'97 Controllers\
 \pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa298\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
 
-\f0\b\fs36 \cf0 2. Database Migrations\
+\f0\b\fs48 \cf0 \strokec2 2. Database Migrations\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 Location\uc0\u8232 src/main/resources/db/migration\
-Files\
-V1__create_accounts_table.sql\uc0\u8232 Creates accounts table\
-V2__create_categories_table.sql\uc0\u8232 Creates categories table\
-V3__create_transactions_table.sql\uc0\u8232 Creates transactions table with foreign keys to accounts and categories\
-V4__create_reports_table.sql\uc0\u8232 Creates reports table with BYTEA column for PDF content\
-V5__create_indexes.sql\uc0\u8232 Indexes:\
-\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
-\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-transactions(account_id)\
-\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-transactions(date)\
-\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-accounts(user_id)\
+\f1\b0\fs24 \cf0 \strokec2 Flyway manages database schema evolution.\
+Migration files:\
 \pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 3. Application Profiles\
-\pard\pardeftab720\sa240\partightenfactor0
-
-\f1\b0\fs24 \cf0 Location\uc0\u8232 src/main/resources\
-application.yml (base configuration)\
-Default profile: dev\uc0\u8232 Flyway enabled\u8232 Migration location: classpath:db/migration\u8232 JPA open-in-view: false\u8232 Actuator: health, info\
-Swagger\uc0\u8232 Swagger UI: /swagger-ui.html\u8232 API docs: /api-docs\
-Client secret loaded from environment variable:\uc0\u8232 $\{OAUTH2_CLIENT_SECRET\}\
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 application-dev.yml\
-Datasource: H2 in-memory\uc0\u8232 jdbc:h2:mem:financedb\
-H2 console:\uc0\u8232 /h2-console\
-JPA\uc0\u8232 ddl-auto: validate\u8232 show-sql: true\
-Logging level: DEBUG\
-Client secret:\uc0\u8232 finance-secret-dev\
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 application-test.yml\
-Datasource: H2 in-memory\uc0\u8232 jdbc:h2:mem:testdb\
-JPA\uc0\u8232 ddl-auto: create-drop\
-Flyway disabled\
-Client secret:\uc0\u8232 finance-secret-test\
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 application-prod.yml\
-Datasource: PostgreSQL\
-Environment variables:\uc0\u8232 $\{DB_USERNAME\}\u8232 $\{DB_PASSWORD\}\
-JPA\uc0\u8232 ddl-auto: validate\u8232 show-sql: false\
-Hibernate dialect:\uc0\u8232 PostgreSQLDialect\
-Logging level:\uc0\u8232 INFO\
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa298\partightenfactor0
-
-\f0\b\fs36 \cf0 4. Infrastructure Configs\
-\pard\pardeftab720\sa240\partightenfactor0
-
-\f1\b0\fs24 \cf0 Location\uc0\u8232 src/main/java/com/camilagksantos/finance/infrastructure/config\
-SecurityConfig.java\
-Permits:\uc0\u8232 Swagger\u8232 H2 console\u8232 Actuator\
-OAuth2 Resource Server with JWT\uc0\u8232 Session policy: STATELESS\
-Bean:\uc0\u8232 BCryptPasswordEncoder\
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 AuthorizationServerConfig.java\
-Client:\uc0\u8232 finance-client\
-Grant types:\uc0\u8232 AUTHORIZATION_CODE\u8232 REFRESH_TOKEN\
-Scopes:\uc0\u8232 openid\u8232 profile\u8232 finance.read\u8232 finance.write\
-Access token duration:\uc0\u8232 1 hour\
-Refresh token duration:\uc0\u8232 7 days\
-RSA key:\uc0\u8232 2048 bits generated in memory\
-Issuer:\uc0\u8232 {\field{\*\fldinst{HYPERLINK "http://localhost:8080/"}}{\fldrslt \cf3 \ul \ulc3 http://localhost:8080}}\
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 OpenApiConfig.java\
-OAuth2 Authorization Code flow configured\
-Scopes:\uc0\u8232 finance.read\u8232 finance.write\u8232 openid\u8232 profile\
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa298\partightenfactor0
-
-\f0\b\fs36 \cf0 5. Domain Exceptions\
-\pard\pardeftab720\sa240\partightenfactor0
-
-\f1\b0\fs24 \cf0 Location\uc0\u8232 src/main/java/com/camilagksantos/finance/domain/exception\
-Structure\
-DomainException (RuntimeException)\
-ResourceNotFoundException\uc0\u8232 AccountNotFoundException\u8232 CategoryNotFoundException\u8232 TransactionNotFoundException\u8232 UserNotFoundException\
-BusinessRuleException\uc0\u8232 ReportGenerationException\
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 ErrorResponse\
-Factory method:\uc0\u8232 ErrorResponse.of(status, error, message, path)\
-Fields\
-timestamp\uc0\u8232 status\u8232 error\u8232 message\u8232 path\
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 GlobalExceptionHandler\
-Exception mapping\
-ResourceNotFoundException -> 404\uc0\u8232 BusinessRuleException -> 422\u8232 MethodArgumentNotValidException -> 400\u8232 Generic Exception -> 500\
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa298\partightenfactor0
-
-\f0\b\fs36 \cf0 6. Domain Models\
-\pard\pardeftab720\sa240\partightenfactor0
-
-\f1\b0\fs24 \cf0 Location\uc0\u8232 src/main/java/com/camilagksantos/finance/domain/model\
-All models implemented as immutable Java records.\
-User\
-No enum\
-Account\
-Enum:\uc0\u8232 AccountType\u8232 CHECKING\u8232 SAVINGS\u8232 CREDIT_CARD\
-Category\
-Enum:\uc0\u8232 CategoryType\u8232 INCOME\u8232 EXPENSE\
-Transaction\
-Enum:\uc0\u8232 TransactionType\u8232 INCOME\u8232 EXPENSE\
-Report\
-Enum:\uc0\u8232 ReportType\u8232 MONTHLY_STATEMENT\u8232 EXPENSES_BY_CATEGORY\u8232 BALANCE_EVOLUTION\
-Notes\
-Transaction.date uses LocalDate\
-Audit timestamps use LocalDateTime:\uc0\u8232 createdAt\u8232 updatedAt\u8232 generatedAt\
-Report.content stored as:\uc0\u8232 byte[]\
-Mapped to:\uc0\u8232 PostgreSQL BYTEA\
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa298\partightenfactor0
-
-\f0\b\fs36 \cf0 7. JPA Entities\
-\pard\pardeftab720\sa240\partightenfactor0
-
-\f1\b0\fs24 \cf0 Location\uc0\u8232 src/main/java/com/camilagksantos/finance/adapters/outbound/persistence/entity\
-AccountEntity\uc0\u8232 Table: accounts\
-CategoryEntity\uc0\u8232 Table: categories\
-TransactionEntity\uc0\u8232 Table: transactions\
-Relationships\uc0\u8232 ManyToOne -> AccountEntity\u8232 ManyToOne -> CategoryEntity\
-Fetch type:\uc0\u8232 LAZY\
-ReportEntity\uc0\u8232 Table: reports\
-content stored as:\uc0\u8232 byte[]\u8232 Database type:\u8232 bytea\
-UserEntity\
-Does not exist\uc0\u8232 User is retrieved from external provider\
-\
-\pard\pardeftab720\sa298\partightenfactor0
-
-\f0\b\fs36 \cf0 8. Output Ports\
-\pard\pardeftab720\sa240\partightenfactor0
-
-\f1\b0\fs24 \cf0 Location\uc0\u8232 src/main/java/com/camilagksantos/finance/domain/ports/output\
-\pard\pardeftab720\sa40\partightenfactor0
-
-\f0\b \cf0 AccountOutputPort
-\f1\b0 \
-\pard\tx566\pardeftab720\sa40\partightenfactor0
-\cf0 save\
-findById\
-findAllByUserId\
-deleteById\
-\
-\pard\pardeftab720\sa40\partightenfactor0
-
-\f0\b \cf0 CategoryOutputPort
-\f1\b0 \
-\pard\tx566\pardeftab720\sa40\partightenfactor0
-\cf0 save\
-findById\
-findAllByUserId\
-deleteById\
-\
-\pard\pardeftab720\sa40\partightenfactor0
-
-\f0\b \cf0 TransactionOutputPort
-\f1\b0 \
-\pard\tx566\pardeftab720\sa40\partightenfactor0
-\cf0 save\
-findById\
-findAllByAccountId\
-findAllByAccountIdAndDateBetween\
-deleteById\
-\
-\pard\pardeftab720\sa40\partightenfactor0
-
-\f0\b \cf0 ReportOutputPort
-\f1\b0 \
-\pard\tx566\pardeftab720\sa40\partightenfactor0
-\cf0 save\
-findById\
-findAllByUserId\
-deleteById\
-\
-\pard\pardeftab720\sa40\partightenfactor0
-
-\f0\b \cf0 UserOutputPort
-\f1\b0 \
-\pard\tx566\pardeftab720\sa40\partightenfactor0
-\cf0 findById\
-findAll\
-read-only (external source)\
-\
-\pard\pardeftab720\sa298\partightenfactor0
-
-\f0\b\fs36 \cf0 9. Input Ports (Use Cases)\
-\pard\pardeftab720\sa240\partightenfactor0
-
-\f1\b0\fs24 \cf0 Location\uc0\u8232 src/main/java/com/camilagksantos/finance/domain/ports/input\
+\f2\fs26 \cf0 \strokec2 \
+V1__create_accounts_table.sql\
+V2__create_categories_table.sql\
+V3__create_transactions_table.sql\
+V4__create_reports_table.sql\
+V5__create_indexes.sql\
 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f0\b \cf0 \outl0\strokewidth0 \strokec4 AccountUseCase 
-\f1\b0 \
+\f1\fs24 \cf0 \strokec2 Key decisions:\
+\'95 UUID used as primary keys\uc0\u8232 \'95 Reports stored with binary content (
+\f2\fs26 \strokec2 BYTEA
+\f1\fs24 \strokec2 )\uc0\u8232 \'95 Indexes added for query performance\
 \pard\pardeftab720\partightenfactor0
-\cf0 create \
-getById \
-getAllByUserId \
-update \
-delete\
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 \
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
 
-\f0\b CategoryUseCase 
-\f1\b0 \
-\pard\pardeftab720\partightenfactor0
-\cf0 create \
-getById \
-getAllByUserId \
-update \
-delete\
+\f0\b\fs48 \cf0 \strokec2 3. Application Profiles\
 \pard\pardeftab720\sa240\partightenfactor0
-\cf0 \
 
-\f0\b TransactionUseCase 
-\f1\b0 \
-\pard\pardeftab720\partightenfactor0
-\cf0 create \
-getById \
-getAllByAccountId \
-getAllByAccountIdAndDateBetween \
-update \
-delete\
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 \
+\f1\b0\fs24 \cf0 \strokec2 Three Spring profiles control runtime configuration.\
+\pard\pardeftab720\sa280\partightenfactor0
 
-\f0\b ReportUseCase 
-\f1\b0 \
-\pard\pardeftab720\partightenfactor0
-\cf0 generate \
-getById \
-getAllByUserId \
-delete No update \'97 reports are generated, not edited\
+\f0\b\fs28 \cf0 \strokec2 dev\
 \pard\pardeftab720\sa240\partightenfactor0
-\cf0 \
 
-\f0\b UserUseCase 
-\f1\b0 \
+\f1\b0\fs24 \cf0 \strokec2 \'95 H2 in-memory database\uc0\u8232 \'95 JsonPlaceholder external API adapter\
 \pard\pardeftab720\partightenfactor0
-\cf0 getById \
-getAll read-only (external source)\
-\pard\tx566\pardeftab720\sa40\partightenfactor0
-\cf0 \outl0\strokewidth0 \
-\pard\tx566\pardeftab720\sa40\partightenfactor0
-\cf0 \
+\cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 prod\
 \pard\pardeftab720\sa240\partightenfactor0
-\cf0 \outl0\strokewidth0 \strokec4 \
+
+\f1\b0\fs24 \cf0 \strokec2 \'95 PostgreSQL database\uc0\u8232 \'95 JsonPlaceholder external API adapter\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 test\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 \'95 H2 in-memory database\uc0\u8232 \'95 H2UserAdapter for deterministic users\
+Used for automated tests.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 4. Infrastructure Configuration\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Infrastructure configuration classes include:\
+\'95 Web configuration\uc0\u8232 \'95 CORS configuration\u8232 \'95 Global exception handling\
+Example:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+GlobalExceptionHandler\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 Responsible for converting domain exceptions into HTTP responses.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 5. Domain Exceptions\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Custom exceptions implemented in the domain layer.\
+Examples:\
+\'95 AccountNotFoundException\uc0\u8232 \'95 CategoryNotFoundException\u8232 \'95 TransactionNotFoundException\
+These exceptions are translated to HTTP responses by the REST layer.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 6. Domain Models\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Domain entities implemented as 
+\f0\b Java records
+\f1\b0 .\
+Entities:\
+\'95 Account\uc0\u8232 \'95 Category\u8232 \'95 Transaction\u8232 \'95 Report\u8232 \'95 User\
+Properties:\
+\'95 immutable\uc0\u8232 \'95 framework independent\u8232 \'95 persistence agnostic\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 7. JPA Entities\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Persistence models located in:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+adapters.outbound.persistence.entity\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 Entities:\
+\'95 AccountEntity\uc0\u8232 \'95 CategoryEntity\u8232 \'95 TransactionEntity\u8232 \'95 ReportEntity\
+Notes:\
+\'95 UUID fields mapped to PostgreSQL 
+\f2\fs26 \strokec2 uuid
+\f1\fs24 \strokec2 \uc0\u8232 \'95 Relationships mapped with 
+\f2\fs26 \strokec2 @ManyToOne
+\f1\fs24 \strokec2 \uc0\u8232 \'95 
+\f2\fs26 \strokec2 TransactionEntity
+\f1\fs24 \strokec2  uses 
+\f2\fs26 \strokec2 FetchType.LAZY
+\f1\fs24 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 8. Output Ports\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Output ports define how the domain interacts with external systems.\
+Examples:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+AccountOutputPort\
+CategoryOutputPort\
+TransactionOutputPort\
+ReportOutputPort\
+UserOutputPort\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 Adapters implement these interfaces.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 9. Input Ports (Use Cases)\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Input ports define application use cases.\
+Examples:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+CreateAccountUseCase\
+GetAccountUseCase\
+CreateTransactionUseCase\
+GenerateReportUseCase\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 These interfaces are implemented by application services.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 10. Domain Services\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Domain services implement business logic.\
+Examples:\
+\'95 AccountService\uc0\u8232 \'95 CategoryService\u8232 \'95 TransactionService\u8232 \'95 ReportService\
+Responsibilities include:\
+\'95 validation\uc0\u8232 \'95 coordination of repositories\u8232 \'95 business rules\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 11. JPA Repositories\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Spring Data repositories located in:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+adapters.outbound.persistence.repository\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 Repositories:\
+\'95 AccountRepository\uc0\u8232 \'95 CategoryRepository\u8232 \'95 TransactionRepository\u8232 \'95 ReportRepository\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 12. Persistence Adapters\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Persistence adapters implement output ports using JPA repositories.\
+Examples:\
+\'95 AccountPersistenceAdapter\uc0\u8232 \'95 CategoryPersistenceAdapter\u8232 \'95 TransactionPersistenceAdapter\u8232 \'95 ReportPersistenceAdapter\
+Responsibilities:\
+\'95 convert domain models \uc0\u8596  JPA entities\u8232 \'95 perform database operations\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 13. External Adapters\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 External adapters connect the system to third-party APIs.\
+Example:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+JsonPlaceholderUserAdapter\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 Used to retrieve users from the JsonPlaceholder API.\
+For testing environments:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+H2UserAdapter\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 Provides deterministic user data.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 14. DTOs\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 DTOs define request and response models used by REST controllers.\
+Packages:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+dto.request\
+dto.response\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 Examples:\
+Requests:\
+\'95 CreateAccountRequest\uc0\u8232 \'95 CreateTransactionRequest\
+Responses:\
+\'95 AccountResponse\uc0\u8232 \'95 TransactionResponse\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 15. Persistence Mappers\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 MapStruct mappers convert:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+JPA Entity \uc0\u8596  Domain Model\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 Location:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+adapters.outbound.persistence.mapper\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 Examples:\
+\'95 AccountPersistenceMapper\uc0\u8232 \'95 CategoryPersistenceMapper\u8232 \'95 TransactionPersistenceMapper\u8232 \'95 ReportPersistenceMapper\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 16. Application Mappers\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 MapStruct mappers convert:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+Request/Response DTO \uc0\u8596  Domain Model\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 Location:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+application.mapper\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 Examples:\
+\'95 AccountMapper\uc0\u8232 \'95 CategoryMapper\u8232 \'95 TransactionMapper\u8232 \'95 ReportMapper\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 17. REST Controllers\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 REST controllers expose the application API.\
+Location:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+adapters.inbound.web.controller\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 Controllers:\
+\'95 AccountController\uc0\u8232 \'95 CategoryController\u8232 \'95 TransactionController\u8232 \'95 ReportController\
+Controllers interact with the application via 
+\f0\b input ports (use cases)
+\f1\b0 .\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 18. Tests\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0\fs24 \cf3 \strokec3 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \strokec2 Unit Tests \'97 Domain Services\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Status: 
+\f0\b COMPLETED
+\f1\b0 \
+Tests verify business logic implemented in domain services.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \strokec2 Unit Tests \'97 Application Mappers\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Status: 
+\f0\b COMPLETED
+\f1\b0 \
+Tests verify MapStruct mappings between:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+DTO \uc0\u8596  Domain Models\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf3 \strokec3 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \strokec2 Integration Tests \'97 Persistence Adapters\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Status: 
+\f0\b COMPLETED
+\f1\b0 \
+Test classes:\
+\'95 AccountPersistenceAdapterTest\uc0\u8232 \'95 CategoryPersistenceAdapterTest\u8232 \'95 TransactionPersistenceAdapterTest\u8232 \'95 ReportPersistenceAdapterTest\
+Notes:\
+\'95 
+\f2\fs26 \strokec2 ReportPersistenceAdapter.save()
+\f1\fs24 \strokec2  uses 
+\f2\fs26 \strokec2 byte[0]
+\f1\fs24 \strokec2  as a placeholder for the 
+\f2\fs26 \strokec2 content
+\f1\fs24 \strokec2  field\uc0\u8232 \'95 This guarantees the 
+\f0\b NOT NULL constraint
+\f1\b0  on 
+\f2\fs26 \strokec2 reports.content
+\f1\fs24 \strokec2  while JasperReports is not yet implemented\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \strokec2 Integration Tests \'97 Controllers\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Status: 
+\f0\b COMPLETED
+\f1\b0 \
+Test classes:\
+\'95 AccountControllerTest\uc0\u8232 \'95 CategoryControllerTest\u8232 \'95 TransactionControllerTest\u8232 \'95 ReportControllerTest\
+Notes:\
+\'95 Package: 
+\f2\fs26 \strokec2 integration.controller
+\f1\fs24 \strokec2  (not E2E \'97 web layer tests with full Spring context)\
+\'95 Uses:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+@SpringBootTest(MOCK)\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 and\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+MockMvcBuilders.webAppContextSetup\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 \'95 Uses:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+@ActiveProfiles("test")\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 and\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+@Transactional\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 to ensure automatic rollback between tests\
+\'95 
+\f2\fs26 \strokec2 ObjectMapper
+\f1\fs24 \strokec2  instantiated manually with:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+JavaTimeModule\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 instead of 
+\f2\fs26 \strokec2 @Autowired
+\f1\fs24 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 19. Current Status\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 The project currently has:\
+\'95 complete domain layer\uc0\u8232 \'95 fully implemented persistence layer\u8232 \'95 external API integration\u8232 \'95 REST API controllers\u8232 \'95 unit tests\u8232 \'95 integration tests for persistence adapters\u8232 \'95 integration tests for controllers\
+The system is 
+\f0\b fully functional except for report PDF generation
+\f1\b0 .\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 20. Remaining Work\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Next planned improvements:\
+\'95 JasperReports integration for PDF generation\uc0\u8232 \'95 Documentation final review\u8232 \'95 Final commits and repository cleanup\
 }

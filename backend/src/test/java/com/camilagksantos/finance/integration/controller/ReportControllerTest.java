@@ -1,4 +1,4 @@
-package com.camilagksantos.finance.e2e.controller;
+package com.camilagksantos.finance.integration.controller;
 
 import com.camilagksantos.finance.application.dto.request.ReportRequest;
 import com.camilagksantos.finance.domain.model.Report.ReportType;

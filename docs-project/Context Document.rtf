@@ -1,1341 +1,350 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2868
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\fmodern\fcharset0 Courier;
 \f3\fnil\fcharset0 Menlo-Regular;\f4\froman\fcharset0 TimesNewRomanPSMT;}
-{\colortbl;\red255\green255\blue255;\red109\green109\blue109;\red0\green0\blue0;}
-{\*\expandedcolortbl;;\cssrgb\c50196\c50196\c50196;\cssrgb\c0\c0\c0;}
-{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
-{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
-{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
-{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
-{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
-{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}}
-{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}}
-\paperw11900\paperh16840\margl1440\margr1440\vieww13800\viewh14400\viewkind0
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red109\green109\blue109;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c50196\c50196\c50196;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14080\viewh17660\viewkind0
 \deftab720
 \pard\pardeftab720\sa321\partightenfactor0
 
 \f0\b\fs48 \cf0 \expnd0\expndtw0\kerning0
-Personal Finance Management System\
-\pard\pardeftab720\sa298\partightenfactor0
-
-\fs36 \cf0 Backend \'97 Architecture & Planning Document\
-\pard\pardeftab720\sa240\partightenfactor0
-
-\f1\b0\fs24 \cf0 Portfolio Project\
+\outl0\strokewidth0 \strokec2 Personal Finance Manager \'97 Architecture Context Document\
 \pard\pardeftab720\partightenfactor0
-\cf2 \
+
+\f1\b0\fs24 \cf3 \strokec3 \
 \pard\pardeftab720\sa321\partightenfactor0
 
-\f0\b\fs48 \cf0 1. Final Plan\
-\pard\pardeftab720\sa280\partightenfactor0
-
-\fs28 \cf0 Decision\
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth4443\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-
-\fs24 \cf0 Area\cell 
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-\cf0 Choice\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth4443\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-
-\f1\b0 \cf0 Architecture\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Pure Hexagonal \'97 isolated domain\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth4443\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 OAuth2\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Spring Authorization Server\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth4443\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Users\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 JSONPlaceholder (prod) / H2 mock (dev, test)\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth4443\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Data\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 PostgreSQL (prod) / H2 (dev, test)\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth4443\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Entities\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 User, Account, Category, Transaction, Report\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth4443\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Report storage\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 byte[] stored in database\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth4443\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Tests\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Unit + Integration + E2E\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth4443\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Documentation\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Swagger / OpenAPI + Javadoc\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth4443\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Build\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Maven + Lombok + Flyway\cell \lastrow\row
+\f0\b\fs48 \cf0 \strokec2 1. Final Architecture Plan\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f0\b \cf0 External user provider used in production:
-\f1\b0  JSONPlaceholder\
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa321\partightenfactor0
-
-\f0\b\fs48 \cf0 2. Domain Entities\
-\pard\pardeftab720\sa240\partightenfactor0
-
-\f1\b0\fs24 \cf0 All domain entities are implemented as immutable Java records (
-\f2\fs26 record
-\f1\fs24 ).\uc0\u8232 Mutation is handled by creating new instances \'97 actual persistence mutation occurs in the JPA Entity layer.\
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa298\partightenfactor0
-
-\f0\b\fs36 \cf0 User\
-\pard\pardeftab720\sa240\partightenfactor0
-
-\f1\b0\fs24 \cf0 (Not persisted \'97 sourced from external adapter)\
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth920\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth586\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth3419\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-
-\f0\b \cf0 Field\cell 
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-\cf0 Type\cell 
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-\cf0 Notes\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth920\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth586\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth3419\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-
-\f1\b0 \cf0 id\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Long\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 External ID from JSONPlaceholder\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth920\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth586\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth3419\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 name\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 String\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Full name\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth920\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth586\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth3419\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 username\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 String\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Username\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth920\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth586\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth3419\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 email\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 String\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Email address\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth920\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth586\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth3419\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 phone\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 String\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Phone number\cell \lastrow\row
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa298\partightenfactor0
-
-\f0\b\fs36 \cf0 Account\
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1000\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth4142\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-
-\fs24 \cf0 Field\cell 
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-\cf0 Type\cell 
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-\cf0 Notes\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1000\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth4142\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-
-\f1\b0 \cf0 id\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 UUID\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Primary key\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1000\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth4142\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 userId\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Long\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Reference to User (logical FK)\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1000\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth4142\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 name\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 String\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Account name\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1000\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth4142\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 type\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Enum\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 CHECKING, SAVINGS, CREDIT_CARD\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1000\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth4142\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 balance\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 BigDecimal\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Current balance\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1000\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth4142\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 createdAt\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 LocalDateTime\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Creation timestamp\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1000\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth4142\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 updatedAt\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 LocalDateTime\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Last update timestamp\cell \lastrow\row
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa298\partightenfactor0
-
-\f0\b\fs36 \cf0 Category\
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1000\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth2972\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-
-\fs24 \cf0 Field\cell 
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-\cf0 Type\cell 
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-\cf0 Notes\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1000\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth2972\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-
-\f1\b0 \cf0 id\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 UUID\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Primary key\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1000\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth2972\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 userId\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Long\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Reference to User (logical FK)\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1000\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth2972\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 name\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 String\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Category name\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1000\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth2972\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 type\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Enum\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 INCOME, EXPENSE\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1000\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth2972\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 createdAt\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 LocalDateTime\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Creation timestamp\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1000\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth2972\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 updatedAt\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 LocalDateTime\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Last update timestamp\cell \lastrow\row
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa298\partightenfactor0
-
-\f0\b\fs36 \cf0 Transaction\
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1066\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth2172\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-
-\fs24 \cf0 Field\cell 
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-\cf0 Type\cell 
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-\cf0 Notes\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1066\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth2172\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-
-\f1\b0 \cf0 id\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 UUID\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Primary key\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1066\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth2172\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 accountId\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 UUID\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Reference to Account\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1066\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth2172\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 categoryId\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 UUID\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Reference to Category\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1066\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth2172\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 amount\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 BigDecimal\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Transaction amount\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1066\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth2172\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 type\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Enum\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 INCOME, EXPENSE\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1066\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth2172\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 description\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 String\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Optional description\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1066\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth2172\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 date\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 LocalDate\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Transaction date\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1066\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth2172\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 createdAt\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 LocalDateTime\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Creation timestamp\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1066\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth2172\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 updatedAt\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 LocalDateTime\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Last update timestamp\cell \lastrow\row
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa298\partightenfactor0
-
-\f0\b\fs36 \cf0 Report\
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1172\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth8535\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-
-\fs24 \cf0 Field\cell 
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-\cf0 Type\cell 
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-\cf0 Notes\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1172\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth8535\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-
-\f1\b0 \cf0 id\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 UUID\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Primary key\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1172\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth8535\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 userId\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Long\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Reference to User (logical FK)\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1172\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth8535\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 title\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 String\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Report title\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1172\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth8535\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 type\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Enum\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 MONTHLY_STATEMENT, EXPENSES_BY_CATEGORY, BALANCE_EVOLUTION\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1172\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth8535\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 generatedAt\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 LocalDateTime\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Generation timestamp\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1172\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth1497\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth8535\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 content\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 byte[]\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 PDF file stored as binary in database\cell \lastrow\row
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa321\partightenfactor0
-
-\f0\b\fs48 \cf0 3. Environment Profiles\
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth675\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth4051\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth1420\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-
-\fs24 \cf0 Profile\cell 
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-\cf0 User Source\cell 
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-\cf0 Database\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth675\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth4051\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth1420\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-
-\f1\b0 \cf0 prod\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 JsonPlaceholderUserAdapter (real source)\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 PostgreSQL\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth675\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth4051\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth1420\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 dev\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 H2UserAdapter (mock)\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 H2\cell \row
-
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth675\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
-\clvertalc \clshdrawnil \clwWidth4051\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth1420\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 test\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 H2UserAdapter (mock)\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 H2 in-memory\cell \lastrow\row
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa321\partightenfactor0
-
-\f0\b\fs48 \cf0 4. Package Structure\
-\pard\pardeftab720\sa298\partightenfactor0
-
-\fs36 \cf0 4.1 Main Sources\
-\pard\pardeftab720\partightenfactor0
-
-\f2\b0\fs26 \cf0 \
-\
-src/main/java/com/\{your-name\}/finance/\
-\
-domain\
- 
-\f3 \uc0\u9500 \u9472 
-\f2  model\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  User.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  Account.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  Category.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  Transaction.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9492 \u9472 
-\f2  Report.java\
- 
-\f3 \uc0\u9474 
-\f2 \
- 
-\f3 \uc0\u9500 \u9472 
-\f2  ports\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  input\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  AccountUseCase.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  CategoryUseCase.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  TransactionUseCase.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  ReportUseCase.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9492 \u9472 
-\f2  UserUseCase.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2 \
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9492 \u9472 
-\f2  output\
- 
-\f3 \uc0\u9474 
-\f2        
-\f3 \uc0\u9500 \u9472 
-\f2  AccountOutputPort.java\
- 
-\f3 \uc0\u9474 
-\f2        
-\f3 \uc0\u9500 \u9472 
-\f2  CategoryOutputPort.java\
- 
-\f3 \uc0\u9474 
-\f2        
-\f3 \uc0\u9500 \u9472 
-\f2  TransactionOutputPort.java\
- 
-\f3 \uc0\u9474 
-\f2        
-\f3 \uc0\u9500 \u9472 
-\f2  ReportOutputPort.java\
- 
-\f3 \uc0\u9474 
-\f2        
-\f3 \uc0\u9492 \u9472 
-\f2  UserOutputPort.java\
- 
-\f3 \uc0\u9474 
-\f2 \
- 
-\f3 \uc0\u9500 \u9472 
-\f2  service\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  AccountService.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  CategoryService.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  TransactionService.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  ReportService.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9492 \u9472 
-\f2  UserService.java\
- 
-\f3 \uc0\u9474 
-\f2 \
- 
-\f3 \uc0\u9492 \u9472 
-\f2  exception\
-     
-\f3 \uc0\u9500 \u9472 
-\f2  AccountNotFoundException.java\
-     
-\f3 \uc0\u9500 \u9472 
-\f2  CategoryNotFoundException.java\
-     
-\f3 \uc0\u9500 \u9472 
-\f2  TransactionNotFoundException.java\
-     
-\f3 \uc0\u9500 \u9472 
-\f2  ReportGenerationException.java\
-     
-\f3 \uc0\u9492 \u9472 
-\f2  UserNotFoundException.java\
-\
-\
-\
-application\
- 
-\f3 \uc0\u9500 \u9472 
-\f2  dto\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  request\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9492 \u9472 
-\f2  response\
- 
-\f3 \uc0\u9474 
-\f2 \
- 
-\f3 \uc0\u9492 \u9472 
-\f2  mapper\
-     
-\f3 \uc0\u9500 \u9472 
-\f2  AccountMapper.java\
-     
-\f3 \uc0\u9500 \u9472 
-\f2  CategoryMapper.java\
-     
-\f3 \uc0\u9500 \u9472 
-\f2  TransactionMapper.java\
-     
-\f3 \uc0\u9492 \u9472 
-\f2  ReportMapper.java\
-\
-\
-\
-adapters\
- 
-\f3 \uc0\u9500 \u9472 
-\f2  inbound\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  rest\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  AccountController.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  CategoryController.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  TransactionController.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  ReportController.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  UserController.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9492 \u9472 
-\f2  handler\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2        
-\f3 \uc0\u9492 \u9472 
-\f2  GlobalExceptionHandler.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2 \
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9492 \u9472 
-\f2  security\
- 
-\f3 \uc0\u9474 
-\f2        
-\f3 \uc0\u9492 \u9472 
-\f2  AuthorizationServerConfig.java\
- 
-\f3 \uc0\u9474 
-\f2 \
- 
-\f3 \uc0\u9492 \u9472 
-\f2  outbound\
-     
-\f3 \uc0\u9500 \u9472 
-\f2  persistence\
-     
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  entity\
-     
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  AccountEntity.java\
-     
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  CategoryEntity.java\
-     
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  TransactionEntity.java\
-     
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9492 \u9472 
-\f2  ReportEntity.java\
-     
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2 \
-     
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  repository\
-     
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  AccountJpaRepository.java\
-     
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  CategoryJpaRepository.java\
-     
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  TransactionJpaRepository.java\
-     
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9492 \u9472 
-\f2  ReportJpaRepository.java\
-     
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9474 
-\f2 \
-     
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9492 \u9472 
-\f2  adapter\
-     
-\f3 \uc0\u9474 
-\f2        
-\f3 \uc0\u9500 \u9472 
-\f2  AccountPersistenceAdapter.java\
-     
-\f3 \uc0\u9474 
-\f2        
-\f3 \uc0\u9500 \u9472 
-\f2  CategoryPersistenceAdapter.java\
-     
-\f3 \uc0\u9474 
-\f2        
-\f3 \uc0\u9500 \u9472 
-\f2  TransactionPersistenceAdapter.java\
-     
-\f3 \uc0\u9474 
-\f2        
-\f3 \uc0\u9492 \u9472 
-\f2  ReportPersistenceAdapter.java\
-     
-\f3 \uc0\u9474 
-\f2 \
-     
-\f3 \uc0\u9492 \u9472 
-\f2  external\
-         
-\f3 \uc0\u9500 \u9472 
-\f2  jsonplaceholder\
-         
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  JsonPlaceholderUserAdapter.java\
-         
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9492 \u9472 
-\f2  client\
-         
-\f3 \uc0\u9474 
-\f2        
-\f3 \uc0\u9492 \u9472 
-\f2  JsonPlaceholderClient.java\
-         
-\f3 \uc0\u9474 
-\f2 \
-         
-\f3 \uc0\u9492 \u9472 
-\f2  mock\
-             
-\f3 \uc0\u9492 \u9472 
-\f2  H2UserAdapter.java\
-\
-\
-\
-infrastructure\
- 
-\f3 \uc0\u9500 \u9472 
-\f2  config\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  SecurityConfig.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  DatabaseConfig.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9500 \u9472 
-\f2  CacheConfig.java\
- 
-\f3 \uc0\u9474 
-\f2    
-\f3 \uc0\u9492 \u9472 
-\f2  OpenApiConfig.java\
- 
-\f3 \uc0\u9474 
-\f2 \
- 
-\f3 \uc0\u9492 \u9472 
-\f2  profile\
-     
-\f3 \uc0\u9500 \u9472 
-\f2  DevConfig.java\
-     
-\f3 \uc0\u9492 \u9472 
-\f2  ProdConfig.java\
-\
-\pard\pardeftab720\sa240\partightenfactor0
-
-\f1\fs24 \cf0 Enums are defined as inner types of their respective records:\
+\f1\b0\fs24 \cf0 \strokec2 This project follows 
+\f0\b Hexagonal Architecture (Ports and Adapters)
+\f1\b0  to ensure strong separation between:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
-\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-Account.AccountType 
-\f4 \uc0\u8594 
-\f1  CHECKING, SAVINGS, CREDIT_CARD\
-\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-Category.CategoryType 
-\f4 \uc0\u8594 
-\f1  INCOME, EXPENSE\
-\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-Transaction.TransactionType 
-\f4 \uc0\u8594 
-\f1  INCOME, EXPENSE\
-\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-Report.ReportType 
-\f4 \uc0\u8594 
-\f1  MONTHLY_STATEMENT, EXPENSES_BY_CATEGORY, BALANCE_EVOLUTION\
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-\pard\pardeftab720\sa321\partightenfactor0
-
-\f0\b\fs48 \cf0 4.2 Resources\
-\pard\pardeftab720\partightenfactor0
-
-\f2\b0\fs26 \cf0 \
-\
-src/main/resources\
-\
-application.yml\
-application-dev.yml\
-application-test.yml\
-application-prod.yml\
-\
-db/migration\
- 
-\f3 \uc0\u9500 \u9472 
-\f2  V1__create_accounts_table.sql\
- 
-\f3 \uc0\u9500 \u9472 
-\f2  V2__create_categories_table.sql\
- 
-\f3 \uc0\u9500 \u9472 
-\f2  V3__create_transactions_table.sql\
- 
-\f3 \uc0\u9500 \u9472 
-\f2  V4__create_reports_table.sql\
- 
-\f3 \uc0\u9492 \u9472 
-\f2  V5__create_indexes.sql\
-\
-reports\
- 
-\f3 \uc0\u9492 \u9472 
-\f2  *.jrxml\
-\
-\pard\pardeftab720\partightenfactor0
-
-\f1\fs24 \cf2 \
-\pard\pardeftab720\sa321\partightenfactor0
-
-\f0\b\fs48 \cf0 4.3 Test Sources\
-\pard\pardeftab720\partightenfactor0
-
-\f2\b0\fs26 \cf0 \
-\
-src/test/java/com/\{your-name\}/finance/\
-\
-unit\
- 
-\f3 \uc0\u9500 \u9472 
-\f2  domain/service\
- 
-\f3 \uc0\u9492 \u9472 
-\f2  application/mapper\
-\
-integration\
- 
-\f3 \uc0\u9500 \u9472 
-\f2  persistence\
- 
-\f3 \uc0\u9492 \u9472 
-\f2  external\
-\
-e2e\
- 
-\f3 \uc0\u9492 \u9472 
-\f2  controller\
-\
-\pard\pardeftab720\partightenfactor0
-
-\f1\fs24 \cf2 \
-\pard\pardeftab720\sa321\partightenfactor0
-
-\f0\b\fs48 \cf0 5. Key Architectural Decisions\
-\pard\pardeftab720\sa298\partightenfactor0
-
-\fs36 \cf0 5.1 Pure Hexagonal Architecture\
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 domain logic\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 application use cases\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 infrastructure\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 external integrations\
 \pard\pardeftab720\sa240\partightenfactor0
-
-\f1\b0\fs24 \cf0 The domain layer contains 
-\f0\b zero dependencies on any framework
-\f1\b0 .\
-Spring Boot, JPA, and external libraries are confined to:\
+\cf0 \strokec2 The core business logic lives entirely inside the 
+\f0\b domain layer
+\f1\b0  and is completely independent from frameworks.\
+External systems such as:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
-\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-adapters\
-\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-infrastructure\
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 databases\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 APIs\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 web controllers\
 \pard\pardeftab720\sa240\partightenfactor0
-\cf0 The domain communicates externally only through 
+\cf0 \strokec2 communicate with the domain only through 
 \f0\b ports
 \f1\b0 .\
 \pard\pardeftab720\partightenfactor0
-\cf2 \
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 2. Domain Entities\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 The domain layer defines the core business models.\
+Entities:\
+\'95 Account\uc0\u8232 \'95 Category\u8232 \'95 Transaction\u8232 \'95 Report\u8232 \'95 User\
+Characteristics:\
+\'95 Implemented as 
+\f0\b Java records
+\f1\b0 \uc0\u8232 \'95 Immutable\u8232 \'95 No framework annotations\u8232 \'95 No persistence concerns\u8232 \'95 No JSON annotations\
+This ensures the domain remains 
+\f0\b pure and framework-independent
+\f1\b0 .\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 3. Environment Profiles\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 The application uses 
+\f0\b Spring Profiles
+\f1\b0  to control runtime behavior.\
+Profiles:\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 dev\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 \'95 Uses 
+\f0\b H2 in-memory database
+\f1\b0 \uc0\u8232 \'95 Uses 
+\f0\b JsonPlaceholderUserAdapter
+\f1\b0  for external user data\uc0\u8232 \'95 Useful for local development\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 prod\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 \'95 Uses 
+\f0\b PostgreSQL
+\f1\b0 \uc0\u8232 \'95 Uses 
+\f0\b JsonPlaceholderUserAdapter
+\f1\b0 \uc0\u8232 \'95 Intended for real deployment\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 test\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 \'95 Uses 
+\f0\b H2 in-memory database
+\f1\b0 \uc0\u8232 \'95 Uses 
+\f0\b H2UserAdapter
+\f1\b0  for deterministic user data\uc0\u8232 \'95 Enables isolated automated testing\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 4. Package Structure\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 The project structure follows the Hexagonal Architecture layers.\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+finance-manager\
+ 
+\f3 \uc0\u9492 \u9472 
+\f2  src/main/java/com/example/finance_manager\
+\
+  domain\
+   
+\f3 \uc0\u9500 \u9472 
+\f2  model\
+   
+\f3 \uc0\u9500 \u9472 
+\f2  exception\
+   
+\f3 \uc0\u9492 \u9472 
+\f2  port\
+       
+\f3 \uc0\u9500 \u9472 
+\f2  input\
+       
+\f3 \uc0\u9492 \u9472 
+\f2  output\
+\
+  application\
+   
+\f3 \uc0\u9500 \u9472 
+\f2  service\
+   
+\f3 \uc0\u9492 \u9472 
+\f2  mapper\
+\
+  adapters\
+   
+\f3 \uc0\u9500 \u9472 
+\f2  inbound\
+   
+\f3 \uc0\u9474 
+\f2     
+\f3 \uc0\u9492 \u9472 
+\f2  web\
+   
+\f3 \uc0\u9474 
+\f2         
+\f3 \uc0\u9492 \u9472 
+\f2  controller\
+   
+\f3 \uc0\u9474 
+\f2 \
+   
+\f3 \uc0\u9492 \u9472 
+\f2  outbound\
+        
+\f3 \uc0\u9500 \u9472 
+\f2  persistence\
+        
+\f3 \uc0\u9474 
+\f2     
+\f3 \uc0\u9500 \u9472 
+\f2  entity\
+        
+\f3 \uc0\u9474 
+\f2     
+\f3 \uc0\u9500 \u9472 
+\f2  repository\
+        
+\f3 \uc0\u9474 
+\f2     
+\f3 \uc0\u9500 \u9472 
+\f2  adapter\
+        
+\f3 \uc0\u9474 
+\f2     
+\f3 \uc0\u9492 \u9472 
+\f2  mapper\
+        
+\f3 \uc0\u9474 
+\f2 \
+        
+\f3 \uc0\u9492 \u9472 
+\f2  external\
+             
+\f3 \uc0\u9492 \u9472 
+\f2  user\
+\
+  infrastructure\
+   
+\f3 \uc0\u9500 \u9472 
+\f2  config\
+   
+\f3 \uc0\u9492 \u9472 
+\f2  exception\
+\
+  dto\
+   
+\f3 \uc0\u9500 \u9472 
+\f2  request\
+   
+\f3 \uc0\u9492 \u9472 
+\f2  response\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 5. Key Architectural Decisions\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0\fs24 \cf3 \strokec3 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 5.2 Dual User Adapters\
+\f0\b\fs36 \cf0 \strokec2 5.1 Pure Hexagonal Architecture\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 Both adapters implement the same port:\
+\f1\b0\fs24 \cf0 \strokec2 The domain layer contains 
+\f0\b zero dependencies on frameworks
+\f1\b0 .\
+Spring Boot, JPA, and external libraries are confined to:\
+\'95 adapters\uc0\u8232 \'95 infrastructure\
+The domain communicates externally only through 
+\f0\b ports
+\f1\b0 .\
+This keeps the business logic 
+\f0\b independent and testable
+\f1\b0 .\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \strokec2 5.2 Dual User Adapters\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Two adapters implement the same port:\
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs26 \cf0 \
-\
-UserRepositoryPort\
+\f2\fs26 \cf0 \strokec2 \
+UserOutputPort\
 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\fs24 \cf0 Adapters:\
-\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
-\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-JsonPlaceholderUserAdapter\
-\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-H2UserAdapter\
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 The active adapter is selected using:\
+\f1\fs24 \cf0 \strokec2 Adapters:\
+\'95 JsonPlaceholderUserAdapter\uc0\u8232 \'95 H2UserAdapter\
+Selection is controlled via:\
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs26 \cf0 \
-\
+\f2\fs26 \cf0 \strokec2 \
 @Profile\
 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\fs24 \cf0 This keeps the domain fully isolated.\
+\f1\fs24 \cf0 \strokec2 Benefits:\
+\'95 deterministic tests\uc0\u8232 \'95 development without external dependency\u8232 \'95 easy adapter switching\
 \pard\pardeftab720\partightenfactor0
-\cf2 \
+\cf3 \strokec3 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 5.3 Exception Handling\
+\f0\b\fs36 \cf0 \strokec2 5.3 Exception Handling\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 Domain exceptions are thrown inside the domain layer.\
+\f1\b0\fs24 \cf0 \strokec2 Domain exceptions are defined inside the 
+\f0\b domain layer
+\f1\b0 .\
 Examples:\
-\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
-\ls4\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-AccountNotFoundException\
-\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-CategoryNotFoundException\
-\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-TransactionNotFoundException\
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 The REST layer converts them to HTTP responses via:\
+\'95 AccountNotFoundException\uc0\u8232 \'95 CategoryNotFoundException\u8232 \'95 TransactionNotFoundException\
+The REST layer converts them into HTTP responses using:\
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs26 \cf0 \
-\
+\f2\fs26 \cf0 \strokec2 \
 GlobalExceptionHandler\
 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\fs24 \cf0 The domain never depends on HTTP.\
+\f1\fs24 \cf0 \strokec2 This keeps the domain independent from HTTP concerns.\
 \pard\pardeftab720\partightenfactor0
-\cf2 \
+\cf3 \strokec3 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 5.4 Report Storage\
+\f0\b\fs36 \cf0 \strokec2 5.4 Report Storage\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 Reports are stored directly in the database.\
+\f1\b0\fs24 \cf0 \strokec2 Reports are stored 
+\f0\b directly in the database
+\f1\b0 .\
 Type:\
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs26 \cf0 \
-\
+\f2\fs26 \cf0 \strokec2 \
 byte[]\
 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\fs24 \cf0 PostgreSQL type:\
+\f1\fs24 \cf0 \strokec2 PostgreSQL type:\
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs26 \cf0 \
-\
+\f2\fs26 \cf0 \strokec2 \
 BYTEA\
 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\fs24 \cf0 Benefits:\
-\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
-\ls5\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-No filesystem dependency\
-\ls5\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-Container-friendly\
-\ls5\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-Easier deployment\
-\ls5\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-Self-contained service\
+\f1\fs24 \cf0 \strokec2 Benefits:\
+\'95 no filesystem dependency\uc0\u8232 \'95 easier container deployment\u8232 \'95 simplified infrastructure\u8232 \'95 self-contained service\
+The binary content exists only in 
+\f0\b ReportEntity
+\f1\b0 , not in the domain model.\
 \pard\pardeftab720\partightenfactor0
-\cf2 \
+\cf3 \strokec3 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 5.5 Database Indexes\
+\f0\b\fs36 \cf0 \strokec2 5.5 Database Indexes\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 Defined in:\
+\f1\b0\fs24 \cf0 \strokec2 Indexes are defined in:\
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs26 \cf0 \
-\
+\f2\fs26 \cf0 \strokec2 \
 V5__create_indexes.sql\
 \
 
 \itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
 \clvertalc \clshdrawnil \clwWidth1146\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
 \clvertalc \clshdrawnil \clwWidth1746\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth1939\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\clvertalc \clshdrawnil \clwWidth1679\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab720\qc\partightenfactor0
 
-\f0\b\fs24 \cf0 Table\cell 
+\f0\b\fs24 \cf0 \strokec2 Table\cell 
 \pard\intbl\itap1\pardeftab720\qc\partightenfactor0
 \cf0 Index\cell 
 \pard\intbl\itap1\pardeftab720\qc\partightenfactor0
@@ -1344,190 +353,246 @@ V5__create_indexes.sql\
 \itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
 \clvertalc \clshdrawnil \clwWidth1146\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
 \clvertalc \clshdrawnil \clwWidth1746\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth1939\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\clvertalc \clshdrawnil \clwWidth1679\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 
 \f1\b0 \cf0 transactions\cell 
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 \cf0 index(account_id)\cell 
 \pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Account queries\cell \row
+\cf0 account queries\cell \row
 
 \itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
 \clvertalc \clshdrawnil \clwWidth1146\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
 \clvertalc \clshdrawnil \clwWidth1746\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth1939\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\clvertalc \clshdrawnil \clwWidth1679\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 \cf0 transactions\cell 
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 \cf0 index(date)\cell 
 \pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Reports / date filters\cell \row
+\cf0 reports and filters\cell \row
 
 \itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
 \clvertalc \clshdrawnil \clwWidth1146\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
 \clvertalc \clshdrawnil \clwWidth1746\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
-\clvertalc \clshdrawnil \clwWidth1939\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\clvertalc \clshdrawnil \clwWidth1679\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 \cf0 accounts\cell 
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 \cf0 index(user_id)\cell 
 \pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 User data isolation\cell \lastrow\row
+\cf0 user isolation\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
-\cf2 \
+\cf3 \strokec3 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 5.6 Domain Models as Records\
+\f0\b\fs36 \cf0 \strokec2 5.6 Domain Models as Records\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 Domain models are implemented as Java records, enforcing immutability at the domain layer.\uc0\u8232 Updates produce new instances rather than mutating existing ones.\
-The JPA Entity layer (
-\f2\fs26 AccountEntity
-\f1\fs24 , etc.) remains mutable and fully isolated from the domain.\
-\pard\pardeftab720\sa240\partightenfactor0
-
-\f0\b\fs36 \cf0 5.7 JPA Entity Mapping
-\f1\b0  
-\fs24 \
-JPA Entities live exclusively in 
-\f2\fs26 adapters.outbound.persistence.entity
-\f1\fs24 . Key decisions:\
-\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls6\ilvl0
-\f2\fs26 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-TransactionEntity
-\f1\fs24  uses 
-\f2\fs26 @ManyToOne(fetch = FetchType.LAZY)
-\f1\fs24  for 
-\f2\fs26 AccountEntity
-\f1\fs24  and 
-\f2\fs26 CategoryEntity
-\f1\fs24 \
-\ls6\ilvl0
-\f2\fs26 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-ReportEntity
-\f1\fs24  holds 
-\f2\fs26 byte[] content
-\f1\fs24  mapped as 
-\f2\fs26 columnDefinition = "bytea"
-\f1\fs24  (PostgreSQL native type)\
-\ls6\ilvl0
-\f2\fs26 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-User
-\f1\fs24  has no JPA Entity \'97 sourced from external adapter only\
-\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls6\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-Enums mapped as 
-\f2\fs26 EnumType.STRING
-\f1\fs24 \
-\ls6\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-UUID fields use 
-\f2\fs26 columnDefinition = "uuid"
-\f1\fs24 \
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 \
+\f1\b0\fs24 \cf0 \strokec2 Domain models use 
+\f0\b Java records
+\f1\b0 .\
+Benefits:\
+\'95 immutability\uc0\u8232 \'95 thread safety\u8232 \'95 concise code\u8232 \'95 value semantics\
+Updates create 
+\f0\b new instances
+\f1\b0 , while persistence mutation occurs in 
+\f0\b JPA entities
+\f1\b0 .\
 \pard\pardeftab720\partightenfactor0
-\cf2 \
+\cf3 \strokec3 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \strokec2 5.7 JPA Entity Mapping\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 JPA entities exist only inside:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+adapters.outbound.persistence.entity\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 Decisions:\
+\'95 
+\f2\fs26 \strokec2 TransactionEntity
+\f1\fs24 \strokec2  uses 
+\f2\fs26 \strokec2 @ManyToOne(fetch = FetchType.LAZY)
+\f1\fs24 \strokec2 \uc0\u8232 \'95 
+\f2\fs26 \strokec2 ReportEntity
+\f1\fs24 \strokec2  stores PDF as 
+\f2\fs26 \strokec2 byte[]
+\f1\fs24 \strokec2  mapped to 
+\f2\fs26 \strokec2 bytea
+\f1\fs24 \strokec2 \uc0\u8232 \'95 
+\f2\fs26 \strokec2 User
+\f1\fs24 \strokec2  has 
+\f0\b no JPA entity
+\f1\b0 \uc0\u8232 \'95 enums mapped using 
+\f2\fs26 \strokec2 EnumType.STRING
+\f1\fs24 \strokec2 \uc0\u8232 \'95 UUID columns defined as 
+\f2\fs26 \strokec2 uuid
+\f1\fs24 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \strokec2 5.8 MapStruct Mappers \'97 Two Groups\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Two mapper groups exist.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 Application Mappers\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Location:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+application.mapper\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 Mapping:\
+Request/Response DTOs 
+\f4 \uc0\u8596 
+\f1  Domain Models\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 Persistence Mappers\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Location:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+adapters.outbound.persistence.mapper\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 Mapping:\
+JPA Entities 
+\f4 \uc0\u8596 
+\f1  Domain Models\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \strokec2 5.9 Report Content Placeholder Strategy\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 While 
+\f0\b JasperReports integration is not yet implemented
+\f1\b0 , the report PDF content is temporarily stored as an empty byte array.\
+Implementation decision:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+ReportPersistenceAdapter.save()\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 sets\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+byte[0]\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 as a placeholder value for the 
+\f2\fs26 \strokec2 content
+\f1\fs24 \strokec2  field.\
+This ensures the 
+\f0\b NOT NULL constraint
+\f1\b0  defined in the 
+\f2\fs26 \strokec2 reports
+\f1\fs24 \strokec2  table is respected without breaking the report generation flow.\
+Benefits:\
+\'95 keeps the database schema stable\uc0\u8232 \'95 avoids nullable binary columns\u8232 \'95 allows report metadata to be persisted before PDF generation is implemented\u8232 \'95 maintains forward compatibility with the future JasperReports integration\
+The placeholder will be replaced with the generated PDF binary once the 
+\f0\b JasperReports module
+\f1\b0  is implemented.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
 \pard\pardeftab720\sa321\partightenfactor0
 
-\f0\b\fs48 \cf0 6. Technology Stack\
+\f0\b\fs48 \cf0 \strokec2 6. Technology Stack\
+\pard\pardeftab720\sa240\partightenfactor0
 
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth3712\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
+\f1\b0\fs24 \cf0 \strokec2 Core technologies used in the project.\
+\pard\pardeftab720\sa280\partightenfactor0
 
-\fs24 \cf0 Category\cell 
-\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
-\cf0 Technology\cell \row
+\f0\b\fs28 \cf0 \strokec2 Backend\
+\pard\pardeftab720\sa240\partightenfactor0
 
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth3712\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
+\f1\b0\fs24 \cf0 \strokec2 \'95 Java 21\uc0\u8232 \'95 Spring Boot\u8232 \'95 Spring Web\u8232 \'95 Spring Data JPA\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
 
-\f1\b0 \cf0 Framework\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Spring Boot\cell \row
+\f0\b\fs28 \cf0 \strokec2 Persistence\
+\pard\pardeftab720\sa240\partightenfactor0
 
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth3712\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Security\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Spring Authorization Server (OAuth2)\cell \row
+\f1\b0\fs24 \cf0 \strokec2 \'95 PostgreSQL\uc0\u8232 \'95 H2 (dev/test environments)\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
 
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth3712\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Persistence\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Spring Data JPA + PostgreSQL / H2\cell \row
+\f0\b\fs28 \cf0 \strokec2 Database Migration\
+\pard\pardeftab720\sa240\partightenfactor0
 
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth3712\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Migration\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Flyway\cell \row
+\f1\b0\fs24 \cf0 \strokec2 \'95 Flyway\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
 
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth3712\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 HTTP Client\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 OpenFeign\cell \row
+\f0\b\fs28 \cf0 \strokec2 Mapping\
+\pard\pardeftab720\sa240\partightenfactor0
 
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth3712\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Mapping\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 MapStruct\cell \row
+\f1\b0\fs24 \cf0 \strokec2 \'95 MapStruct\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
 
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth3712\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Boilerplate\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Lombok\cell \row
+\f0\b\fs28 \cf0 \strokec2 Testing\
+\pard\pardeftab720\sa240\partightenfactor0
 
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth3712\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Reporting\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 JasperReports\cell \row
+\f1\b0\fs24 \cf0 \strokec2 \'95 JUnit 5\uc0\u8232 \'95 Spring Boot Test\u8232 \'95 MockMvc\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
 
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth3712\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Build\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Maven\cell \row
+\f0\b\fs48 \cf0 \strokec2 7. Testing Status\
+\pard\pardeftab720\sa240\partightenfactor0
 
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth3712\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Documentation\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Swagger / OpenAPI 3 + Javadoc\cell \row
+\f1\b0\fs24 \cf0 \strokec2 Current testing coverage.\
+\pard\pardeftab720\partightenfactor0
 
-\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalc \clshdrawnil \clwWidth1479\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
-\clvertalc \clshdrawnil \clwWidth3712\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 Testing\cell 
-\pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf0 JUnit 5 + Mockito + Testcontainers\cell \lastrow\row
+\f2\fs26 \cf0 \strokec2 \
+Unit Tests \'97 Domain Services: COMPLETED\
+Unit Tests \'97 Application Mappers: COMPLETED\
+Integration Tests \'97 Persistence Adapters: COMPLETED\
+Integration Tests \'97 Controllers: COMPLETED\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\b\fs48 \cf0 \strokec2 8. Next Steps\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 Remaining planned improvements.\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \strokec2 \
+\'95 JasperReports implementation\
+\'95 Update documentation\
+\'95 Final commits\
 }
