@@ -8,7 +8,7 @@ import java.util.UUID;
 
 public interface ReportOutputPort {
 
-    Report save(Report report);
+    Report save(Report report, byte[] content);
 
     Optional<Report> findById(UUID id);
 

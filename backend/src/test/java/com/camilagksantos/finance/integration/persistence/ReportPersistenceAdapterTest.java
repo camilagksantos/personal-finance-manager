@@ -47,7 +47,7 @@ class ReportPersistenceAdapterTest {
 
     @Test
     void shouldSaveReport() {
-        Report result = reportPersistenceAdapter.save(report);
+        Report result = reportPersistenceAdapter.save(report, new byte[0]);
 
         assertThat(result).isNotNull();
         assertThat(result.id()).isEqualTo(report.id());
@@ -56,7 +56,7 @@ class ReportPersistenceAdapterTest {
 
     @Test
     void shouldFindReportById() {
-        reportPersistenceAdapter.save(report);
+        reportPersistenceAdapter.save(report, new byte[0]);
 
         Optional<Report> result = reportPersistenceAdapter.findById(report.id());
 
@@ -73,7 +73,7 @@ class ReportPersistenceAdapterTest {
 
     @Test
     void shouldFindAllReportsByUserId() {
-        reportPersistenceAdapter.save(report);
+        reportPersistenceAdapter.save(report, new byte[0]);
 
         List<Report> result = reportPersistenceAdapter.findAllByUserId(1L);
 
@@ -83,7 +83,7 @@ class ReportPersistenceAdapterTest {
 
     @Test
     void shouldDeleteReportById() {
-        reportPersistenceAdapter.save(report);
+        reportPersistenceAdapter.save(report, new byte[0]);
 
         reportPersistenceAdapter.deleteById(report.id());
 

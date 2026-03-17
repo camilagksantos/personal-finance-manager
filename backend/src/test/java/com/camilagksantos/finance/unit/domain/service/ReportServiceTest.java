@@ -1,8 +1,12 @@
 package com.camilagksantos.finance.unit.domain.service;
 
 import com.camilagksantos.finance.domain.exception.ResourceNotFoundException;
+import com.camilagksantos.finance.domain.model.Account;
 import com.camilagksantos.finance.domain.model.Report;
+import com.camilagksantos.finance.domain.ports.output.AccountOutputPort;
+import com.camilagksantos.finance.domain.ports.output.ReportGeneratorPort;
 import com.camilagksantos.finance.domain.ports.output.ReportOutputPort;
+import com.camilagksantos.finance.domain.ports.output.TransactionOutputPort;
 import com.camilagksantos.finance.domain.service.ReportService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,6 +15,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -27,11 +32,21 @@ class ReportServiceTest {
     @Mock
     private ReportOutputPort reportOutputPort;
 
+    @Mock
+    private ReportGeneratorPort reportGeneratorPort;
+
+    @Mock
+    private AccountOutputPort accountOutputPort;
+
+    @Mock
+    private TransactionOutputPort transactionOutputPort;
+
     @InjectMocks
     private ReportService reportService;
 
     private UUID reportId;
     private Report report;
+    private Account account;
 
     @BeforeEach
     void setUp() {
@@ -45,17 +60,31 @@ class ReportServiceTest {
                 LocalDate.now(),
                 LocalDateTime.now()
         );
+        account = new Account(
+                UUID.randomUUID(),
+                1L,
+                "Conta Corrente",
+                Account.AccountType.CHECKING,
+                BigDecimal.valueOf(1000),
+                LocalDateTime.now(),
+                LocalDateTime.now()
+        );
     }
 
     @Test
     void shouldGenerateReport() {
-        when(reportOutputPort.save(any(Report.class))).thenReturn(report);
+        when(accountOutputPort.findAllByUserId(1L)).thenReturn(List.of(account));
+        when(transactionOutputPort.findAllByAccountIdAndDateBetween(
+                any(UUID.class), any(LocalDate.class), any(LocalDate.class)))
+                .thenReturn(List.of());
+        when(reportGeneratorPort.generate(any(Report.class), any(), any())).thenReturn(new byte[0]);
+        when(reportOutputPort.save(any(Report.class), any(byte[].class))).thenReturn(report);
 
         Report result = reportService.generate(report);
 
         assertThat(result).isNotNull();
         assertThat(result.title()).isEqualTo("Relatório Mensal");
-        verify(reportOutputPort, times(1)).save(any(Report.class));
+        verify(reportOutputPort, times(1)).save(any(Report.class), any(byte[].class));
     }
 
     @Test

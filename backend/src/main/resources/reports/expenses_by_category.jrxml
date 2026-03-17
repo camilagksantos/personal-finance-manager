@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports
+              http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="expenses_by_category"
+              pageWidth="595"
+              pageHeight="842"
+              columnWidth="535"
+              leftMargin="30"
+              rightMargin="30"
+              topMargin="30"
+              bottomMargin="30">
+
+    <parameter name="title" class="java.lang.String"/>
+    <parameter name="startDate" class="java.lang.String"/>
+    <parameter name="endDate" class="java.lang.String"/>
+
+    <field name="categoryId" class="java.lang.String"/>
+    <field name="totalAmount" class="java.math.BigDecimal"/>
+
+    <title>
+        <band height="60">
+            <textField>
+                <reportElement x="0" y="0" width="535" height="30"/>
+                <textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
+                <textElement textAlignment="Center">
+                    <font size="16" isBold="true"/>
+                </textElement>
+            </textField>
+            <textField>
+                <reportElement x="0" y="30" width="535" height="20"/>
+                <textFieldExpression><![CDATA["Period: " + $P{startDate} + " to " + $P{endDate}]]></textFieldExpression>
+                <textElement textAlignment="Center">
+                    <font size="10"/>
+                </textElement>
+            </textField>
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="20">
+            <staticText>
+                <reportElement x="0" y="0" width="335" height="20"/>
+                <text><![CDATA[Category]]></text>
+                <textElement><font isBold="true"/></textElement>
+            </staticText>
+            <staticText>
+                <reportElement x="335" y="0" width="200" height="20"/>
+                <text><![CDATA[Total Amount]]></text>
+                <textElement><font isBold="true"/></textElement>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="0" width="335" height="20"/>
+                <textFieldExpression><![CDATA[$F{categoryId}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="335" y="0" width="200" height="20"/>
+                <textFieldExpression><![CDATA[$F{totalAmount}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+    <pageFooter>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="0" width="535" height="20"/>
+                <textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+                <textElement textAlignment="Right"/>
+            </textField>
+        </band>
+    </pageFooter>
+
+</jasperReport>

@@ -23,11 +23,9 @@ public class ReportPersistenceAdapter implements ReportOutputPort {
     }
 
     @Override
-    public Report save(Report report) {
+    public Report save(Report report, byte[] content) {
         ReportEntity entity = reportEntityMapper.toEntity(report);
-        if (entity.getContent() == null) {
-            entity.setContent(new byte[0]);
-        }
+        entity.setContent(content != null ? content : new byte[0]);
         return reportEntityMapper.toDomain(reportJpaRepository.save(entity));
     }
 
