@@ -1,0 +1,13 @@
+body.theme-light {
+    color-scheme: light;
+    --finance-bg: var(--finance-bg-light);
+    --finance-surface: var(--finance-surface-light);
+    --finance-text: var(--finance-text-light);
+}
+
+body.theme-dark {
+    color-scheme: dark;
+    --finance-bg: var(--finance-bg-dark);
+    --finance-surface: var(--finance-surface-dark);
+    --finance-text: var(--finance-text-dark);
+}
