@@ -1,0 +1,19 @@
+.app-shell {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: var(--finance-bg);
+}
+
+.app-body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.app-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--finance-spacing-lg);
+    transition: margin-left 0.3s ease;
+}

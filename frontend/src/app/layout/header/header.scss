@@ -1,0 +1,26 @@
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--finance-spacing-md);
+    height: 64px;
+    background: var(--finance-primary);
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: var(--finance-spacing-sm);
+}
+
+.app-title {
+    font-size: var(--finance-font-lg);
+    font-weight: var(--finance-weight-medium);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,13 @@
+<header class="app-header">
+    <div class="header-left">
+        <button mat-icon-button (click)="layout.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span class="app-title">Finance Manager</span>
+    </div>
+    <div class="header-right">
+        <button mat-icon-button (click)="theme.toggle()">
+            <mat-icon>{{ theme.currentTheme() === 'light' ? 'dark_mode' : 'light_mode' }}</mat-icon>
+        </button>
+    </div>
+</header>

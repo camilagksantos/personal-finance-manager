@@ -1,10 +1,11 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { RouterOutlet } from "../../node_modules/@angular/router/types/_router_module-chunk";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [MatButtonModule],
+  imports: [MatButtonModule, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
