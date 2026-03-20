@@ -1,13 +1,59 @@
 body.theme-light {
     color-scheme: light;
-    --finance-bg: var(--finance-bg-light);
-    --finance-surface: var(--finance-surface-light);
-    --finance-text: var(--finance-text-light);
+
+    --finance-primary: #3B82F6;
+    --finance-primary-light: #60A5FA;
+    --finance-primary-soft: rgba(59, 130, 246, 0.12);
+
+    --finance-header-bg: rgba(1, 17, 46, 0.85);
+    --finance-sidebar-bg: rgba(27, 58, 107, 0.75);
+    --finance-content-bg: #F5F7FB;
+    --finance-surface: rgba(255, 255, 255, 0.65);
+    --finance-glass-highlight: rgba(255, 255, 255, 0.25);
+
+    --finance-text: #0A1E35;
+    --finance-text-muted: #5C6B80;
+    --finance-nav-text: rgba(255, 255, 255, 0.9);
+    --finance-border: rgba(255, 255, 255, 0.15);
+
+    --finance-shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --finance-shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.15);
+
+    --finance-radius: 12px;
+    --finance-transition: 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    --finance-letter-spacing: -0.01em;
+
+    --finance-z-header: 200;
+    --finance-z-sidebar: 150;
+    --finance-z-content: 1;
 }
 
 body.theme-dark {
     color-scheme: dark;
-    --finance-bg: var(--finance-bg-dark);
-    --finance-surface: var(--finance-surface-dark);
-    --finance-text: var(--finance-text-dark);
+
+    --finance-primary: #3B82F6;
+    --finance-primary-light: #60A5FA;
+    --finance-primary-soft: rgba(59, 130, 246, 0.12);
+
+    --finance-header-bg: rgba(1, 17, 46, 0.9);
+    --finance-sidebar-bg: rgba(27, 58, 107, 0.6);
+    --finance-content-bg: #0C1B2E;
+    --finance-surface: rgba(19, 45, 80, 0.6);
+    --finance-glass-highlight: rgba(255, 255, 255, 0.08);
+
+    --finance-text: #E8EDF5;
+    --finance-text-muted: #8FA3BC;
+    --finance-nav-text: rgba(255, 255, 255, 0.85);
+    --finance-border: rgba(255, 255, 255, 0.08);
+
+    --finance-shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --finance-shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.15);
+
+    --finance-radius: 12px;
+    --finance-transition: 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    --finance-letter-spacing: -0.01em;
+
+    --finance-z-header: 200;
+    --finance-z-sidebar: 150;
+    --finance-z-content: 1;
 }

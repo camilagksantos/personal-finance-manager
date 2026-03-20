@@ -1,13 +1,25 @@
 .sidebar {
     width: 240px;
-    min-height: 100%;
-    background: var(--finance-primary);
-    transition: transform 0.3s ease, width 0.3s ease;
+    height: 100%;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    z-index: var(--finance-z-sidebar);
+
+    background: var(--finance-sidebar-bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    border-right: 1px solid var(--finance-border);
+    box-shadow:
+        inset 0 1px 0 var(--finance-glass-highlight),
+        var(--finance-shadow-glass);
+
+    transition: transform var(--finance-transition);
     overflow: hidden;
 
     &.closed {
         transform: translateX(-100%);
-        width: 0;
     }
 }
 
@@ -18,27 +30,60 @@
 }
 
 .nav-item {
+    position: relative;
+    overflow: hidden;
+
     display: flex;
     align-items: center;
     gap: var(--finance-spacing-md);
-    padding: var(--finance-spacing-md) var(--finance-spacing-lg);
-    color: rgba(255, 255, 255, 0.8);
+
+    padding: calc(var(--finance-spacing-md) * 1.1) var(--finance-spacing-lg);
+    margin: 6px 10px;
+
+    color: var(--finance-nav-text);
     text-decoration: none;
-    transition: background 0.2s ease, color 0.2s ease;
+
+    border-radius: 10px;
+
+    transition: all var(--finance-transition);
 
     &:hover {
-        background: rgba(255, 255, 255, 0.1);
-        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateX(3px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+        mat-icon {
+            transform: scale(1.1);
+        }
+    }
+
+    &:active {
+        transform: scale(0.98);
     }
 
     &.active {
-        background: rgba(255, 255, 255, 0.15);
+        background: var(--finance-primary-soft);
         color: #fff;
-        border-left: 3px solid var(--finance-primary-light);
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 20%;
+            height: 60%;
+            width: 3px;
+            border-radius: 4px;
+            background: var(--finance-primary);
+        }
     }
+}
+
+mat-icon {
+    transition: transform var(--finance-transition);
 }
 
 .nav-label {
     font-size: var(--finance-font-md);
     font-weight: var(--finance-weight-medium);
+    letter-spacing: var(--finance-letter-spacing);
 }

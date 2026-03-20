@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background: var(--finance-bg);
+    background: var(--finance-header-bg);
 }
 
 .app-body {
@@ -14,6 +14,40 @@
 .app-content {
     flex: 1;
     overflow-y: auto;
-    padding: var(--finance-spacing-lg);
-    transition: margin-left 0.3s ease;
+    padding: calc(var(--finance-spacing-lg) * 1.25);
+    background: var(--finance-content-bg);
+    transition: margin-left var(--finance-transition);
+    animation: fadeIn 0.4s var(--finance-transition);
+    z-index: var(--finance-z-content);
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(100, 116, 139, 0.3);
+        border-radius: 8px;
+
+        &:hover {
+            background: rgba(100, 116, 139, 0.5);
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.995);
+        filter: blur(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
 }
