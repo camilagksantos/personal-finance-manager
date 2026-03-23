@@ -1,0 +1,198 @@
+.transactions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--finance-spacing-lg);
+
+    &.loading {
+        opacity: 0.7;
+        transition: opacity 0.2s ease;
+    }
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--finance-spacing-md);
+
+    h1 {
+        font-size: var(--finance-font-xxl);
+        font-weight: var(--finance-weight-bold);
+        color: var(--finance-text);
+        margin: 0;
+        letter-spacing: var(--finance-letter-spacing);
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        display: flex;
+        gap: var(--finance-spacing-md);
+        margin: var(--finance-spacing-xs) 0 0;
+        font-size: var(--finance-font-sm);
+
+        .income {
+            color: var(--finance-success);
+            font-weight: var(--finance-weight-medium);
+        }
+
+        .expense {
+            color: var(--finance-danger);
+            font-weight: var(--finance-weight-medium);
+        }
+    }
+
+    button {
+        border-radius: 999px;
+        padding: 0 18px;
+        font-weight: var(--finance-weight-medium);
+        box-shadow: var(--finance-shadow-soft);
+
+        &:hover {
+            box-shadow: var(--finance-shadow-glass);
+        }
+    }
+}
+
+.error-banner {
+    display: flex;
+    align-items: center;
+    gap: var(--finance-spacing-sm);
+    padding: var(--finance-spacing-md);
+    background: rgba(192, 57, 43, 0.1);
+    border: 1px solid rgba(192, 57, 43, 0.3);
+    border-radius: var(--finance-radius-md);
+    color: var(--finance-danger);
+}
+
+.filter-chips {
+    display: flex;
+    align-items: center;
+    gap: var(--finance-spacing-sm);
+    flex-wrap: wrap;
+}
+
+.filters-label {
+    font-size: var(--finance-font-xs);
+    color: var(--finance-text-muted);
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--finance-border);
+    background: transparent;
+    color: var(--finance-text-muted);
+    font-size: var(--finance-font-sm);
+    cursor: pointer;
+    transition: all var(--finance-transition);
+
+    &:hover {
+        border-color: var(--finance-primary-light);
+        color: var(--finance-primary-light);
+    }
+
+    &--active {
+        background: var(--finance-primary-soft);
+        border-color: var(--finance-primary);
+        color: var(--finance-primary-light);
+    }
+}
+
+.active-filter-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--finance-spacing-md);
+    flex-wrap: wrap;
+
+    mat-form-field {
+        min-width: 200px;
+    }
+}
+
+.table-container {
+    background: var(--finance-surface);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--finance-border);
+    border-radius: var(--finance-radius);
+    overflow: hidden;
+    box-shadow:
+        inset 0 1px 0 var(--finance-glass-highlight),
+        var(--finance-shadow-soft);
+
+    table {
+        width: 100%;
+    }
+}
+
+.mat-mdc-header-cell {
+    color: var(--finance-text-muted);
+    font-weight: var(--finance-weight-medium);
+    font-size: var(--finance-font-xs);
+    padding: 14px 16px;
+}
+
+.mat-mdc-cell {
+    padding: 14px 16px;
+}
+
+.mat-mdc-row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    transition: background var(--finance-transition);
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.04);
+    }
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: var(--finance-font-xs);
+    font-weight: var(--finance-weight-medium);
+    backdrop-filter: blur(6px);
+
+    &--green {
+        background: rgba(46, 125, 82, 0.15);
+        color: #4ade80;
+    }
+
+    &--red {
+        background: rgba(192, 57, 43, 0.15);
+        color: #f87171;
+    }
+}
+
+.positive {
+    color: var(--finance-success);
+    font-weight: var(--finance-weight-medium);
+}
+
+.negative {
+    color: var(--finance-danger);
+    font-weight: var(--finance-weight-medium);
+}
+
+.actions {
+    display: flex;
+    gap: var(--finance-spacing-xs);
+    justify-content: flex-end;
+}
+
+.empty-row {
+    text-align: center;
+    padding: var(--finance-spacing-xl);
+    color: var(--finance-text-muted);
+    font-size: var(--finance-font-sm);
+
+    span {
+        display: block;
+        margin-top: 4px;
+        font-size: var(--finance-font-xs);
+    }
+}

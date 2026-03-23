@@ -1,0 +1,75 @@
+<div class="dialog-container">
+    <h2 mat-dialog-title>{{ isEdit() ? 'Editar transacção' : 'Nova transacção' }}</h2>
+
+    <mat-dialog-content>
+        <form [formGroup]="form" class="form">
+
+            <mat-form-field appearance="outline">
+                <mat-label>Conta</mat-label>
+                <mat-select formControlName="accountId">
+                    @for (account of data.accounts; track account.id) {
+                    <mat-option [value]="account.id">{{ account.name }}</mat-option>
+                    }
+                </mat-select>
+                @if (form.get('accountId')?.hasError('required')) {
+                <mat-error>Conta é obrigatória</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Categoria</mat-label>
+                <mat-select formControlName="categoryId">
+                    @for (category of data.categories; track category.id) {
+                    <mat-option [value]="category.id">{{ category.name }}</mat-option>
+                    }
+                </mat-select>
+                @if (form.get('categoryId')?.hasError('required')) {
+                <mat-error>Categoria é obrigatória</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Tipo</mat-label>
+                <mat-select formControlName="type">
+                    @for (type of transactionTypes; track type.value) {
+                    <mat-option [value]="type.value">{{ type.label }}</mat-option>
+                    }
+                </mat-select>
+                @if (form.get('type')?.hasError('required')) {
+                <mat-error>Tipo é obrigatório</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Valor</mat-label>
+                <input matInput type="number" formControlName="amount" min="0.01" />
+                @if (form.get('amount')?.hasError('min')) {
+                <mat-error>Valor deve ser positivo</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Data</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="date" />
+                <mat-datepicker-toggle matIconSuffix [for]="picker" />
+                <mat-datepicker #picker />
+                @if (form.get('date')?.hasError('required')) {
+                <mat-error>Data é obrigatória</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Descrição (opcional)</mat-label>
+                <input matInput formControlName="description" />
+            </mat-form-field>
+
+        </form>
+    </mat-dialog-content>
+
+    <mat-dialog-actions align="end">
+        <button mat-button (click)="cancel()">Cancelar</button>
+        <button mat-flat-button (click)="submit()" [disabled]="form.invalid">
+            {{ isEdit() ? 'Guardar' : 'Criar' }}
+        </button>
+    </mat-dialog-actions>
+</div>
