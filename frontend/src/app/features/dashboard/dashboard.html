@@ -1,1 +1,136 @@
-<p>dashboard works!</p>
+<div class="dashboard" [class.loading]="userService.loading()">
+
+    @if (showOverlay()) {
+    <div class="user-overlay">
+        <div class="overlay-card">
+            <mat-icon>account_circle</mat-icon>
+            <h2>Bem-vindo ao Finance Manager</h2>
+            <p>Seleccione um utilizador para continuar</p>
+            @if (userService.loading()) {
+            <mat-spinner diameter="32" />
+            } @else {
+            <mat-form-field appearance="outline">
+                <mat-label>Utilizador</mat-label>
+                <mat-select (selectionChange)="onUserChange($event.value)">
+                    @for (user of userService.users(); track user.id) {
+                    <mat-option [value]="user">{{ user.name }}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+            }
+        </div>
+    </div>
+    }
+
+    <section class="welcome">
+        <div class="welcome-text">
+            <h1>
+                {{ greeting() }}
+                @if (userService.currentUser()) {
+                <span class="username">, {{ userService.currentUser()!.name }}</span>
+                }
+                👋
+            </h1>
+            <p class="subtitle">Aqui está o resumo das suas finanças</p>
+        </div>
+
+        @if (!userService.loading() && userService.currentUser()) {
+        <div class="user-selector">
+            <mat-form-field appearance="outline">
+                <mat-label>Utilizador</mat-label>
+                <mat-select [value]="userService.currentUser()" (selectionChange)="onUserChange($event.value)">
+                    @for (user of userService.users(); track user.id) {
+                    <mat-option [value]="user">{{ user.name }}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+        </div>
+        }
+    </section>
+
+    @if (userService.error()) {
+    <div class="error-banner">
+        <mat-icon>error_outline</mat-icon>
+        <span>{{ userService.error() }}</span>
+    </div>
+    }
+
+    <section class="kpis">
+        <div class="kpi kpi--primary">
+            <span>Saldo total</span>
+            <small class="kpi-context">últimos 30 dias</small>
+            <strong>€{{ kpis().totalBalance.toLocaleString() }}</strong>
+            <small class="positive">+2.5%</small>
+        </div>
+        <div class="kpi">
+            <span>Receitas</span>
+            <small class="kpi-context">vs mês passado</small>
+            <strong>€{{ kpis().income.toLocaleString() }}</strong>
+        </div>
+        <div class="kpi">
+            <span>Despesas</span>
+            <small class="kpi-context">vs mês passado</small>
+            <strong>€{{ kpis().expenses.toLocaleString() }}</strong>
+        </div>
+        <div class="kpi">
+            <span>Poupança</span>
+            <small class="kpi-context">vs mês passado</small>
+            <strong>€{{ kpis().savings.toLocaleString() }}</strong>
+        </div>
+    </section>
+
+    <section class="recent">
+        <h2>Actividade recente</h2>
+        <p class="empty">
+            Ainda não há transacções.<br />
+            Comece por adicionar uma nova.
+        </p>
+    </section>
+
+    <section class="feature-cards">
+        <div class="feature-card">
+            <div class="card-header">
+                <mat-icon>account_balance</mat-icon>
+                <h2>Contas</h2>
+            </div>
+            <p>Crie e gerencie as suas contas bancárias</p>
+            <a routerLink="/accounts" class="card-link">
+                Ver todas <mat-icon>arrow_forward</mat-icon>
+            </a>
+        </div>
+
+        <div class="feature-card">
+            <div class="card-header">
+                <mat-icon>category</mat-icon>
+                <h2>Categorias</h2>
+            </div>
+            <p>Organize as suas categorias de despesa</p>
+            <a routerLink="/categories" class="card-link">
+                Ver todas <mat-icon>arrow_forward</mat-icon>
+            </a>
+        </div>
+
+        <div class="feature-card">
+            <div class="card-header">
+                <mat-icon>swap_horiz</mat-icon>
+                <h2>Transacções</h2>
+            </div>
+            <p>Consulte e filtre as suas transacções</p>
+            <a routerLink="/transactions" class="card-link">
+                Ver todas <mat-icon>arrow_forward</mat-icon>
+            </a>
+        </div>
+
+        <div class="feature-card">
+            <div class="card-header">
+                <mat-icon>bar_chart</mat-icon>
+                <h2>Reports</h2>
+            </div>
+            <p>Analise os seus relatórios financeiros</p>
+            <a routerLink="/reports" class="card-link">
+                Ver todos <mat-icon>arrow_forward</mat-icon>
+            </a>
+        </div>
+    </section>
+
+</div>
