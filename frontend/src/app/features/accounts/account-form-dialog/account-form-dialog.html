@@ -1,0 +1,42 @@
+<div class="dialog-container">
+    <h2 mat-dialog-title>{{ isEdit() ? 'Editar conta' : 'Nova conta' }}</h2>
+
+    <mat-dialog-content>
+        <form [formGroup]="form" class="form">
+            <mat-form-field appearance="outline">
+                <mat-label>Nome da conta</mat-label>
+                <input matInput formControlName="name" placeholder="Ex: Conta principal" />
+                @if (form.get('name')?.hasError('required')) {
+                <mat-error>Nome é obrigatório</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Tipo</mat-label>
+                <mat-select formControlName="type">
+                    @for (type of accountTypes; track type.value) {
+                    <mat-option [value]="type.value">{{ type.label }}</mat-option>
+                    }
+                </mat-select>
+                @if (form.get('type')?.hasError('required')) {
+                <mat-error>Tipo é obrigatório</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Saldo inicial</mat-label>
+                <input matInput type="number" formControlName="balance" min="0" />
+                @if (form.get('balance')?.hasError('min')) {
+                <mat-error>Saldo deve ser zero ou positivo</mat-error>
+                }
+            </mat-form-field>
+        </form>
+    </mat-dialog-content>
+
+    <mat-dialog-actions align="end">
+        <button mat-button (click)="cancel()">Cancelar</button>
+        <button mat-flat-button (click)="submit()" [disabled]="form.invalid">
+            {{ isEdit() ? 'Guardar' : 'Criar' }}
+        </button>
+    </mat-dialog-actions>
+</div>

@@ -1,0 +1,13 @@
+<div class="dialog-container">
+    <h2 mat-dialog-title>Eliminar conta</h2>
+
+    <mat-dialog-content>
+        <p>Tens a certeza que queres eliminar a conta <strong>{{ data.name }}</strong>?</p>
+        <p class="warning">Esta acção não pode ser revertida.</p>
+    </mat-dialog-content>
+
+    <mat-dialog-actions align="end">
+        <button mat-button (click)="cancel()">Cancelar</button>
+        <button mat-flat-button color="warn" (click)="confirm()">Eliminar</button>
+    </mat-dialog-actions>
+</div>

@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { UserResponse } from '../models/user.model';
 
+const STORAGE_KEY = 'finance_current_user';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,7 +12,7 @@ export class User {
   private http = inject(HttpClient);
 
   readonly users = signal<UserResponse[]>([]);
-  readonly currentUser = signal<UserResponse | null>(null);
+  readonly currentUser = signal<UserResponse | null>(this.loadFromStorage());
   readonly loading = signal<boolean>(false);
   readonly error = signal<string | null>(null);
 
@@ -23,24 +25,8 @@ export class User {
         this.users.set(data);
         this.loading.set(false);
       },
-      error: (err) => {
+      error: () => {
         this.error.set('Erro ao carregar utilizadores');
-        this.loading.set(false);
-      }
-    });
-  }
-
-  getById(id: number): void {
-    this.loading.set(true);
-    this.error.set(null);
-
-    this.http.get<UserResponse>(`${environment.apiUrl}/users/${id}`).subscribe({
-      next: (data) => {
-        this.currentUser.set(data);
-        this.loading.set(false);
-      },
-      error: (err) => {
-        this.error.set('Erro ao carregar utilizador');
         this.loading.set(false);
       }
     });
@@ -48,5 +34,20 @@ export class User {
 
   setCurrentUser(user: UserResponse): void {
     this.currentUser.set(user);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
+  }
+
+  clearCurrentUser(): void {
+    this.currentUser.set(null);
+    localStorage.removeItem(STORAGE_KEY);
+  }
+
+  private loadFromStorage(): UserResponse | null {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      return stored ? JSON.parse(stored) : null;
+    } catch {
+      return null;
+    }
   }
 }

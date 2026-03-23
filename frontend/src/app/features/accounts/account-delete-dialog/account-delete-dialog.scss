@@ -1,0 +1,9 @@
+.dialog-container {
+    min-width: 360px;
+}
+
+.warning {
+    color: var(--finance-danger);
+    font-size: var(--finance-font-sm);
+    margin-top: var(--finance-spacing-xs);
+}
