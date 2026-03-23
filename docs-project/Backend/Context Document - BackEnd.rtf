@@ -3,18 +3,18 @@
 \f3\fnil\fcharset0 Menlo-Regular;\f4\froman\fcharset0 TimesNewRomanPSMT;}
 {\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red109\green109\blue109;}
 {\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c50196\c50196\c50196;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww14080\viewh17660\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww14080\viewh13700\viewkind0
 \deftab720
 \pard\pardeftab720\sa321\partightenfactor0
 
 \f0\b\fs48 \cf0 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Personal Finance Manager \'97 Architecture Context Document\
+Personal Finance Manager \'97 Architecture Context Document\
 \pard\pardeftab720\sa298\partightenfactor0
 
 \fs36 \cf0 1. Final Architecture Plan\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 This project follows 
+\f1\b0\fs24 \cf0 This project follows 
 \f0\b Hexagonal Architecture (Ports and Adapters)
 \f1\b0  to ensure strong separation between:\
 \'95 domain logic\uc0\u8232 \'95 application use cases\u8232 \'95 infrastructure\u8232 \'95 external integrations\
@@ -27,60 +27,60 @@ communicate with the domain only through
 \f0\b ports
 \f1\b0 .\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf3 \
 \pard\pardeftab720\sa321\partightenfactor0
 
-\f0\b\fs48 \cf0 \strokec2 2. Domain Entities\
+\f0\b\fs48 \cf0 2. Domain Entities\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 The domain layer defines the core business models.\
+\f1\b0\fs24 \cf0 The domain layer defines the core business models.\
 Entities:\
 \'95 Account\uc0\u8232 \'95 Category\u8232 \'95 Transaction\u8232 \'95 Report\u8232 \'95 User\
 Characteristics:\
 \'95 Implemented as Java records\uc0\u8232 \'95 Immutable\u8232 \'95 No framework annotations\u8232 \'95 No persistence concerns\u8232 \'95 No JSON annotations\
 This ensures the domain remains pure and framework-independent.\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf3 \
 \pard\pardeftab720\sa321\partightenfactor0
 
-\f0\b\fs48 \cf0 \strokec2 3. Environment Profiles\
+\f0\b\fs48 \cf0 3. Environment Profiles\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 The application uses 
+\f1\b0\fs24 \cf0 The application uses 
 \f0\b Spring Profiles
 \f1\b0  to control runtime behavior.\
 Profiles:\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f0\b\fs28 \cf0 \strokec2 dev\
+\f0\b\fs28 \cf0 dev\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 \'95 Uses H2 in-memory database\uc0\u8232 \'95 Uses JsonPlaceholderUserAdapter for external user data\u8232 \'95 Useful for local development\
+\f1\b0\fs24 \cf0 \'95 Uses H2 in-memory database\uc0\u8232 \'95 Uses JsonPlaceholderUserAdapter for external user data\u8232 \'95 Useful for local development\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f0\b\fs28 \cf0 \strokec2 prod\
+\f0\b\fs28 \cf0 prod\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 \'95 Uses PostgreSQL\uc0\u8232 \'95 Uses JsonPlaceholderUserAdapter\u8232 \'95 Intended for real deployment\
+\f1\b0\fs24 \cf0 \'95 Uses PostgreSQL\uc0\u8232 \'95 Uses JsonPlaceholderUserAdapter\u8232 \'95 Intended for real deployment\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f0\b\fs28 \cf0 \strokec2 test\
+\f0\b\fs28 \cf0 test\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 \'95 Uses H2 in-memory database\uc0\u8232 \'95 Uses H2UserAdapter for deterministic user data\u8232 \'95 Enables isolated automated testing\
+\f1\b0\fs24 \cf0 \'95 Uses H2 in-memory database\uc0\u8232 \'95 Uses H2UserAdapter for deterministic user data\u8232 \'95 Enables isolated automated testing\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf3 \
 \pard\pardeftab720\sa321\partightenfactor0
 
-\f0\b\fs48 \cf0 \strokec2 4. Package Structure\
+\f0\b\fs48 \cf0 4. Package Structure\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 The project structure follows the 
+\f1\b0\fs24 \cf0 The project structure follows the 
 \f0\b Hexagonal Architecture layers
 \f1\b0 .\
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs26 \cf0 \strokec2 \
+\f2\fs26 \cf0 \
 finance-manager\
  
 \f3 \uc0\u9492 \u9472 
@@ -182,16 +182,16 @@ finance-manager\
 \
 \pard\pardeftab720\partightenfactor0
 
-\f1\fs24 \cf3 \strokec3 \
+\f1\fs24 \cf3 \
 \pard\pardeftab720\sa321\partightenfactor0
 
-\f0\b\fs48 \cf0 \strokec2 5. Key Architectural Decisions\
+\f0\b\fs48 \cf0 5. Key Architectural Decisions\
 \pard\pardeftab720\sa298\partightenfactor0
 
 \fs36 \cf0 5.1 Pure Hexagonal Architecture\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 The domain layer contains 
+\f1\b0\fs24 \cf0 The domain layer contains 
 \f0\b zero dependencies on frameworks
 \f1\b0 .\
 Spring Boot, JPA, and external libraries are confined to:\
@@ -201,13 +201,13 @@ The domain communicates externally only through
 \f1\b0 .\
 This keeps the business logic independent and testable.\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf3 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 \strokec2 5.2 Dual User Adapters\
+\f0\b\fs36 \cf0 5.2 Dual User Adapters\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 Two adapters implement the same port:\
+\f1\b0\fs24 \cf0 Two adapters implement the same port:\
 
 \f0\b UserOutputPort
 \f1\b0 \
@@ -216,21 +216,21 @@ Adapters:\
 Selection is controlled via:\
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs26 \cf0 \strokec2 \
+\f2\fs26 \cf0 \
 @Profile\
 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\fs24 \cf0 \strokec2 Benefits:\
+\f1\fs24 \cf0 Benefits:\
 \'95 deterministic tests\uc0\u8232 \'95 development without external dependency\u8232 \'95 easy adapter switching\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf3 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 \strokec2 5.3 Exception Handling\
+\f0\b\fs36 \cf0 5.3 Exception Handling\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 Domain exceptions are defined inside the domain layer.\
+\f1\b0\fs24 \cf0 Domain exceptions are defined inside the domain layer.\
 Examples:\
 \'95 AccountNotFoundException\uc0\u8232 \'95 CategoryNotFoundException\u8232 \'95 TransactionNotFoundException\
 The REST layer converts them into HTTP responses using:\
@@ -239,45 +239,45 @@ The REST layer converts them into HTTP responses using:\
 \f1\b0 \
 This keeps the domain independent from HTTP concerns.\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf3 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 \strokec2 5.4 Report Storage\
+\f0\b\fs36 \cf0 5.4 Report Storage\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 Reports are stored directly in the database.\
+\f1\b0\fs24 \cf0 Reports are stored directly in the database.\
 Type:\
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs26 \cf0 \strokec2 \
+\f2\fs26 \cf0 \
 byte[]\
 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\fs24 \cf0 \strokec2 PostgreSQL type:\
+\f1\fs24 \cf0 PostgreSQL type:\
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs26 \cf0 \strokec2 \
+\f2\fs26 \cf0 \
 BYTEA\
 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\fs24 \cf0 \strokec2 Benefits:\
+\f1\fs24 \cf0 Benefits:\
 \'95 no filesystem dependency\uc0\u8232 \'95 easier container deployment\u8232 \'95 simplified infrastructure\u8232 \'95 self-contained service\
 The binary content exists only in 
 \f0\b ReportEntity
 \f1\b0 , not in the domain model.\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf3 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 \strokec2 5.5 Database Indexes\
+\f0\b\fs36 \cf0 5.5 Database Indexes\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 Indexes are defined in:\
+\f1\b0\fs24 \cf0 Indexes are defined in:\
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs26 \cf0 \strokec2 \
+\f2\fs26 \cf0 \
 V5__create_indexes.sql\
 \
 
@@ -287,7 +287,7 @@ V5__create_indexes.sql\
 \clvertalc \clshdrawnil \clwWidth1679\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab720\qc\partightenfactor0
 
-\f0\b\fs24 \cf0 \strokec2 Table\cell 
+\f0\b\fs24 \cf0 Table\cell 
 \pard\intbl\itap1\pardeftab720\qc\partightenfactor0
 \cf0 Index\cell 
 \pard\intbl\itap1\pardeftab720\qc\partightenfactor0
@@ -327,168 +327,190 @@ V5__create_indexes.sql\
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 \cf0 user isolation\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf3 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 \strokec2 5.6 Domain Models as Records\
+\f0\b\fs36 \cf0 5.6 Domain Models as Records\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 Domain models use 
+\f1\b0\fs24 \cf0 Domain models use 
 \f0\b Java records
 \f1\b0 .\
 Benefits:\
 \'95 immutability\uc0\u8232 \'95 thread safety\u8232 \'95 concise code\u8232 \'95 value semantics\
 Updates create new instances, while persistence mutation occurs in JPA entities.\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf3 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 \strokec2 5.7 JPA Entity Mapping\
+\f0\b\fs36 \cf0 5.7 JPA Entity Mapping\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 JPA entities exist only inside:\
+\f1\b0\fs24 \cf0 JPA entities exist only inside:\
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs26 \cf0 \strokec2 \
+\f2\fs26 \cf0 \
 adapters.outbound.persistence.entity\
 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\fs24 \cf0 \strokec2 Decisions:\
+\f1\fs24 \cf0 Decisions:\
 \'95 TransactionEntity uses 
-\f2\fs26 \strokec2 @ManyToOne(fetch = FetchType.LAZY)
-\f1\fs24 \strokec2 \uc0\u8232 \'95 ReportEntity stores PDF as 
-\f2\fs26 \strokec2 byte[]
-\f1\fs24 \strokec2  mapped to 
+\f2\fs26 @ManyToOne(fetch = FetchType.LAZY)
+\f1\fs24 \uc0\u8232 \'95 ReportEntity stores PDF as 
+\f2\fs26 byte[]
+\f1\fs24  mapped to 
 \f0\b bytea
 \f1\b0 \uc0\u8232 \'95 User has 
 \f0\b no JPA entity
 \f1\b0 \uc0\u8232 \'95 enums mapped using 
-\f2\fs26 \strokec2 EnumType.STRING
-\f1\fs24 \strokec2 \uc0\u8232 \'95 UUID columns defined as 
+\f2\fs26 EnumType.STRING
+\f1\fs24 \uc0\u8232 \'95 UUID columns defined as 
 \f0\b uuid
 \f1\b0 \
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf3 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 \strokec2 5.8 MapStruct Mappers \'97 Two Groups\
+\f0\b\fs36 \cf0 5.8 MapStruct Mappers \'97 Two Groups\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 Two mapper groups exist.\
+\f1\b0\fs24 \cf0 Two mapper groups exist.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f0\b\fs28 \cf0 \strokec2 Application Mappers\
+\f0\b\fs28 \cf0 Application Mappers\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 Location:\
+\f1\b0\fs24 \cf0 Location:\
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs26 \cf0 \strokec2 \
+\f2\fs26 \cf0 \
 application.mapper\
 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\fs24 \cf0 \strokec2 Mapping:\
+\f1\fs24 \cf0 Mapping:\
 Request/Response DTOs 
 \f4 \uc0\u8596 
 \f1  Domain Models\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f0\b\fs28 \cf0 \strokec2 Persistence Mappers\
+\f0\b\fs28 \cf0 Persistence Mappers\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 Location:\
+\f1\b0\fs24 \cf0 Location:\
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs26 \cf0 \strokec2 \
+\f2\fs26 \cf0 \
 adapters.outbound.persistence.mapper\
 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\fs24 \cf0 \strokec2 Mapping:\
+\f1\fs24 \cf0 Mapping:\
 JPA Entities 
 \f4 \uc0\u8596 
 \f1  Domain Models\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf3 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf0 \strokec2 5.9 Report Content Placeholder Strategy\
+\f0\b\fs36 \cf0 5.9 Report Content Placeholder Strategy\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 While JasperReports integration is not yet fully implemented, the report PDF content is temporarily stored as an empty byte array.\
+\f1\b0\fs24 \cf0 While JasperReports integration is not yet fully implemented, the report PDF content is temporarily stored as an empty byte array.\
 Implementation decision:\
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs26 \cf0 \strokec2 \
+\f2\fs26 \cf0 \
 ReportPersistenceAdapter.save()\
 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\fs24 \cf0 \strokec2 sets\
+\f1\fs24 \cf0 sets\
 \pard\pardeftab720\partightenfactor0
 
-\f2\fs26 \cf0 \strokec2 \
+\f2\fs26 \cf0 \
 byte[0]\
 \
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\fs24 \cf0 \strokec2 as a placeholder value for the content field.\
+\f1\fs24 \cf0 as a placeholder value for the content field.\
 This ensures the 
 \f0\b NOT NULL constraint
 \f1\b0  defined in the reports table is respected without breaking the report generation flow.\
 Benefits:\
 \'95 keeps the database schema stable\uc0\u8232 \'95 avoids nullable binary columns\u8232 \'95 allows report metadata to be persisted before PDF generation is implemented\u8232 \'95 maintains forward compatibility with the future JasperReports integration\
 
-\f0\b JasperReports integration is partially implemented. The JasperReportAdapter exists and implements ReportGeneratorPort, but the .jrxml templates need to be regenerated in JasperReports 7.x format using Jaspersoft Studio 7. ReportControllerTest is disabled pending this fix.
-\f1\b0 \
+\f0\b JasperReports integration is partially implemented. The JasperReportAdapter exists and implements ReportGeneratorPort, but the .jrxml templates need to be regenerated in JasperReports 7.x format using Jaspersoft Studio 7. ReportControllerTest is disabled pending this fix.\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\fs36 \cf0 5.10 CORS Configuration\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+
+\f1\b0\fs24 \cf0 \outl0\strokewidth0 \strokec2 Cross-Origin Resource Sharing is configured in: \
+WebConfig \
+Location: infrastructure/config \
+Allowed origins: http://localhost:4200 \
+Allowed methods: GET, POST, PUT, DELETE, OPTIONS \
+Allowed headers: \
+* This enables the Angular frontend running on port 4200 to communicate with the backend on port 8080 during local development.\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \outl0\strokewidth0 5.11 Referential Integrity Exception Handling\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0\fs24 \cf0 \outl0\strokewidth0 \strokec2 DataIntegrityViolationException is handled in GlobalExceptionHandler. \
+Response: 409 Conflict \
+Message: Cannot delete this record because it has associated data. Remove the associated records first. \
+This protects foreign key constraints \'97 for example, preventing deletion of a category that has associated transactions.\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \
 \pard\pardeftab720\sa321\partightenfactor0
 
-\f0\b\fs48 \cf0 \strokec2 6. Technology Stack\
+\f0\b\fs48 \cf0 6. Technology Stack\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 Core technologies used in the project.\
+\f1\b0\fs24 \cf0 Core technologies used in the project.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f0\b\fs28 \cf0 \strokec2 Backend\
+\f0\b\fs28 \cf0 Backend\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 \'95 Java 21\uc0\u8232 \'95 Spring Boot\u8232 \'95 Spring Web\u8232 \'95 Spring Data JPA\
+\f1\b0\fs24 \cf0 \'95 Java 21\uc0\u8232 \'95 Spring Boot\u8232 \'95 Spring Web\u8232 \'95 Spring Data JPA\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f0\b\fs28 \cf0 \strokec2 Persistence\
+\f0\b\fs28 \cf0 Persistence\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 \'95 PostgreSQL\uc0\u8232 \'95 H2 (dev/test environments)\
+\f1\b0\fs24 \cf0 \'95 PostgreSQL\uc0\u8232 \'95 H2 (dev/test environments)\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f0\b\fs28 \cf0 \strokec2 Database Migration\
+\f0\b\fs28 \cf0 Database Migration\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 \'95 Flyway\
+\f1\b0\fs24 \cf0 \'95 Flyway\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f0\b\fs28 \cf0 \strokec2 Mapping\
+\f0\b\fs28 \cf0 Mapping\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 \'95 MapStruct\
+\f1\b0\fs24 \cf0 \'95 MapStruct\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f0\b\fs28 \cf0 \strokec2 Testing\
+\f0\b\fs28 \cf0 Testing\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 \'95 JUnit 5\uc0\u8232 \'95 Spring Boot Test\u8232 \'95 MockMvc\
+\f1\b0\fs24 \cf0 \'95 JUnit 5\uc0\u8232 \'95 Spring Boot Test\u8232 \'95 MockMvc\
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf3 \
 \pard\pardeftab720\sa321\partightenfactor0
 
-\f0\b\fs48 \cf0 \strokec2 7. Testing Status\
+\f0\b\fs48 \cf0 7. Testing Status\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 Current testing coverage.\
+\f1\b0\fs24 \cf0 Current testing coverage.\
 Unit Tests \'97 Domain Services: 
 \f0\b COMPLETED
 \f1\b0 \uc0\u8232 Unit Tests \'97 Application Mappers: 
@@ -499,12 +521,12 @@ Unit Tests \'97 Domain Services:
 \f0\b COMPLETED
 \f1\b0 \
 \pard\pardeftab720\partightenfactor0
-\cf3 \strokec3 \
+\cf3 \
 \pard\pardeftab720\sa321\partightenfactor0
 
-\f0\b\fs48 \cf0 \strokec2 8. Next Steps\
+\f0\b\fs48 \cf0 8. Next Steps\
 \pard\pardeftab720\sa240\partightenfactor0
 
-\f1\b0\fs24 \cf0 \strokec2 Remaining planned improvements.\
+\f1\b0\fs24 \cf0 Remaining planned improvements.\
 \'95 Regenerar .jrxml templates no formato JasperReports 7.x (requer Jaspersoft Studio 7)\uc0\u8232 \'95 Reactivar ReportControllerTest ap\'f3s templates correctos\u8232 \'95 Update documentation\u8232 \'95 Final commits\
 }
