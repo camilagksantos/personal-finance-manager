@@ -1,22 +1,20 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TestBed } from '@angular/core/testing';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { TransactionFormDialog } from './transaction-form-dialog';
 
 describe('TransactionFormDialog', () => {
-  let component: TransactionFormDialog;
-  let fixture: ComponentFixture<TransactionFormDialog>;
-
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [TransactionFormDialog],
+      providers: [
+        { provide: MatDialogRef, useValue: { close: vi.fn() } },
+        { provide: MAT_DIALOG_DATA, useValue: { accounts: [], categories: [] } }
+      ]
     }).compileComponents();
-
-    fixture = TestBed.createComponent(TransactionFormDialog);
-    component = fixture.componentInstance;
-    await fixture.whenStable();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    const fixture = TestBed.createComponent(TransactionFormDialog);
+    expect(fixture.componentInstance).toBeTruthy();
   });
 });

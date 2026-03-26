@@ -1,22 +1,20 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TestBed } from '@angular/core/testing';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CategoryFormDialog } from './category-form-dialog';
 
 describe('CategoryFormDialog', () => {
-  let component: CategoryFormDialog;
-  let fixture: ComponentFixture<CategoryFormDialog>;
-
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [CategoryFormDialog],
+      providers: [
+        { provide: MatDialogRef, useValue: { close: vi.fn() } },
+        { provide: MAT_DIALOG_DATA, useValue: { userId: 1 } }
+      ]
     }).compileComponents();
-
-    fixture = TestBed.createComponent(CategoryFormDialog);
-    component = fixture.componentInstance;
-    await fixture.whenStable();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    const fixture = TestBed.createComponent(CategoryFormDialog);
+    expect(fixture.componentInstance).toBeTruthy();
   });
 });

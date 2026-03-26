@@ -1,22 +1,20 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TestBed } from '@angular/core/testing';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { TransactionDeleteDialog } from './transaction-delete-dialog';
 
 describe('TransactionDeleteDialog', () => {
-  let component: TransactionDeleteDialog;
-  let fixture: ComponentFixture<TransactionDeleteDialog>;
-
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [TransactionDeleteDialog],
+      providers: [
+        { provide: MatDialogRef, useValue: { close: vi.fn() } },
+        { provide: MAT_DIALOG_DATA, useValue: { id: '1', accountId: '1', categoryId: '1', amount: 100, type: 'EXPENSE', date: '2026-01-01', createdAt: '', updatedAt: '' } }
+      ]
     }).compileComponents();
-
-    fixture = TestBed.createComponent(TransactionDeleteDialog);
-    component = fixture.componentInstance;
-    await fixture.whenStable();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    const fixture = TestBed.createComponent(TransactionDeleteDialog);
+    expect(fixture.componentInstance).toBeTruthy();
   });
 });

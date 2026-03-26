@@ -1,22 +1,20 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TestBed } from '@angular/core/testing';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AccountFormDialog } from './account-form-dialog';
 
 describe('AccountFormDialog', () => {
-  let component: AccountFormDialog;
-  let fixture: ComponentFixture<AccountFormDialog>;
-
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AccountFormDialog],
+      providers: [
+        { provide: MatDialogRef, useValue: { close: vi.fn() } },
+        { provide: MAT_DIALOG_DATA, useValue: { userId: 1 } }
+      ]
     }).compileComponents();
-
-    fixture = TestBed.createComponent(AccountFormDialog);
-    component = fixture.componentInstance;
-    await fixture.whenStable();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    const fixture = TestBed.createComponent(AccountFormDialog);
+    expect(fixture.componentInstance).toBeTruthy();
   });
 });
