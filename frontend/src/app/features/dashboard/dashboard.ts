@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, computed, signal, effect } from '@angular/core';
+import { Component, inject, OnInit, computed, effect } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -8,6 +8,7 @@ import { User } from '../../core/services/user';
 import { Account } from '../../core/services/account';
 import { Transaction } from '../../core/services/transaction';
 import { UserResponse } from '../../core/models/user.model';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,7 +17,8 @@ import { UserResponse } from '../../core/models/user.model';
     MatSelectModule,
     MatProgressSpinnerModule,
     MatIconModule,
-    RouterLink
+    RouterLink,
+    DatePipe,
   ],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss'
@@ -43,6 +45,13 @@ export class Dashboard implements OnInit {
 
     return { totalBalance, income, expenses, savings };
   });
+
+  protected recentTransactions = computed(() =>
+    this.transactionService.transactions()
+      .slice()
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, 10)
+  );
 
   constructor() {
     effect(() => {

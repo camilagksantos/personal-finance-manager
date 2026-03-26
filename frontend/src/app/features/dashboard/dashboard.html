@@ -56,35 +56,57 @@
     }
 
     <section class="kpis">
-        <div class="kpi kpi--primary">
-            <span>Saldo total</span>
+        <div class="kpi kpi--balance">
+            <span class="kpi-label">Saldo total</span>
             <small class="kpi-context">últimos 30 dias</small>
-            <strong>€{{ kpis().totalBalance.toLocaleString() }}</strong>
-            <small class="positive">+2.5%</small>
+            <strong class="kpi-value">€{{ kpis().totalBalance.toLocaleString() }}</strong>
+            <small class="kpi-trend positive">+2.5%</small>
         </div>
-        <div class="kpi">
-            <span>Receitas</span>
+    
+        <div class="kpi kpi--income">
+            <span class="kpi-label">Receitas</span>
             <small class="kpi-context">vs mês passado</small>
-            <strong>€{{ kpis().income.toLocaleString() }}</strong>
+            <strong class="kpi-value">€{{ kpis().income.toLocaleString() }}</strong>
         </div>
-        <div class="kpi">
-            <span>Despesas</span>
+    
+        <div class="kpi kpi--expense">
+            <span class="kpi-label">Despesas</span>
             <small class="kpi-context">vs mês passado</small>
-            <strong>€{{ kpis().expenses.toLocaleString() }}</strong>
+            <strong class="kpi-value">€{{ kpis().expenses.toLocaleString() }}</strong>
         </div>
-        <div class="kpi">
-            <span>Poupança</span>
+    
+        <div class="kpi kpi--savings">
+            <span class="kpi-label">Poupança</span>
             <small class="kpi-context">vs mês passado</small>
-            <strong>€{{ kpis().savings.toLocaleString() }}</strong>
+            <strong class="kpi-value">€{{ kpis().savings.toLocaleString() }}</strong>
         </div>
     </section>
 
     <section class="recent">
         <h2>Actividade recente</h2>
+        @if (recentTransactions().length === 0) {
         <p class="empty">
             Ainda não há transacções.<br />
             Comece por adicionar uma nova.
         </p>
+        } @else {
+        <div class="recent-list">
+            @for (t of recentTransactions(); track t.id) {
+            <div class="recent-item">
+                <div class="recent-icon" [class.income]="t.type === 'INCOME'" [class.expense]="t.type === 'EXPENSE'">
+                    <mat-icon>{{ t.type === 'INCOME' ? 'arrow_downward' : 'arrow_upward' }}</mat-icon>
+                </div>
+                <div class="recent-info">
+                    <span class="recent-description">{{ t.description ?? '—' }}</span>
+                    <span class="recent-date">{{ t.date | date:'dd/MM/yyyy' }}</span>
+                </div>
+                <span class="recent-amount" [class.positive]="t.type === 'INCOME'" [class.negative]="t.type === 'EXPENSE'">
+                    {{ t.type === 'INCOME' ? '+' : '-' }}€{{ t.amount.toLocaleString() }}
+                </span>
+            </div>
+            }
+        </div>
+        }
     </section>
 
     <section class="feature-cards">

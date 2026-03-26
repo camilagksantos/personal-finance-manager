@@ -23,16 +23,76 @@ body {
   height: 100%;
 }
 
+/* =========================================
+   SELECT / INPUT (CAIXA EXTERNA)
+========================================= */
+
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+/* container real do input */
+.mat-mdc-text-field-wrapper {
+  background: var(--finance-surface);
+  border-radius: 12px;
+  border: 1px solid var(--finance-border);
+  transition: all var(--finance-transition);
+  backdrop-filter: blur(10px);
+}
+
+/* REMOVE borda padrão horrorosa do material */
+.mdc-notched-outline__leading,
+.mdc-notched-outline__notch,
+.mdc-notched-outline__trailing {
+  border: none !important;
+}
+
+/* hover */
+.mat-mdc-form-field:hover .mat-mdc-text-field-wrapper {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* focus */
+.mat-mdc-form-field.mat-focused .mat-mdc-text-field-wrapper {
+  border-color: var(--finance-primary);
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.2);
+}
+
+/* texto */
+.mat-mdc-select-value,
+.mat-mdc-input-element {
+  color: var(--finance-text);
+  font-size: var(--finance-font-sm);
+}
+
+/* label */
+.mat-mdc-floating-label {
+  color: var(--finance-text-muted) !important;
+}
+
+/* seta */
+.mat-mdc-select-arrow {
+  color: var(--finance-text-muted);
+  opacity: 0.8;
+}
+
+/* =========================================
+   DROPDOWN (PAINEL INTERNO)
+========================================= */
+
 .mat-mdc-select-panel {
   background: var(--finance-surface) !important;
   backdrop-filter: blur(16px) !important;
   border-radius: 12px !important;
+  border: 1px solid var(--finance-border) !important;
+  box-shadow: var(--finance-shadow-glass) !important;
 }
 
+/* opções */
 .mat-mdc-option {
   border-radius: 8px;
-  margin: 2px 4px;
-  transition: background var(--finance-transition), transform var(--finance-transition);
+  margin: 2px 6px;
+  transition: all var(--finance-transition);
 
   &:hover {
     background: rgba(255, 255, 255, 0.06) !important;
@@ -44,6 +104,10 @@ body {
     color: var(--finance-primary-light) !important;
   }
 }
+
+/* =========================================
+   DATEPICKER
+========================================= */
 
 .mat-datepicker-content {
   background: var(--finance-surface) !important;
@@ -61,19 +125,19 @@ body {
   background: var(--finance-primary-soft) !important;
 }
 
+/* =========================================
+   SCROLLBAR
+========================================= */
+
 ::-webkit-scrollbar {
   width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
   background: rgba(100, 116, 139, 0.3);
   border-radius: 6px;
+}
 
-  &:hover {
-    background: rgba(100, 116, 139, 0.5);
-  }
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.5);
 }
