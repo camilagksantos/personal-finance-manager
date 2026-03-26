@@ -1,59 +1,146 @@
-# Frontend
+# Personal Finance Manager — Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.2.
+Modern Angular frontend for managing personal finances. Built with Angular 21, Signals, and Angular Material.
 
-## Development server
+## ✨ Features
 
-To start a local development server, run:
+- Standalone components — zero NgModules
+- Zoneless execution with Angular Signals
+- Time-based light/dark theme switching
+- Glassmorphism UI with Angular Material M3
+- Interactive charts with Chart.js
+- Full CRUD for accounts, categories and transactions
+- Route guards and localStorage persistence
+- 22 passing unit tests with Vitest
 
+## 🏗 Architecture Overview
+```
+src/app/
+├── core/
+│   ├── models/        ← TypeScript interfaces aligned with backend DTOs
+│   ├── services/      ← Signal-based HTTP services
+│   ├── guards/        ← Route protection
+│   └── interceptors/
+│
+├── shared/            ← Reusable components and utilities
+│
+├── features/
+│   ├── dashboard/     ← KPIs, charts and recent activity
+│   ├── accounts/      ← Full CRUD with filters and sorting
+│   ├── transactions/  ← Full CRUD with chip-based filters
+│   ├── categories/    ← Full CRUD
+│   └── reports/       ← Pending backend implementation
+│
+└── layout/
+    ├── header/        ← Theme toggle and sidebar control
+    ├── sidebar/       ← Glassmorphism navigation
+    └── main-layout/   ← Application shell
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js v22.22.1+
+- Angular CLI 21+
+- Backend running on `http://localhost:8080`
+
+### Install dependencies
+```bash
+cd frontend
+npm install
+```
+
+### Run development server
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open `http://localhost:4200` in your browser.
 
-## Code scaffolding
+> The backend must be running for data to load. See the backend README for setup instructions.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🧪 Tests
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
+Run all unit tests:
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+| Layer | Description |
+|-------|-------------|
+| Services | Signal state, HTTP calls, race condition guards |
+| Components | Dashboard KPIs, overlay, recent transactions |
+| Guards | Auth redirect when no user selected |
+| Dialogs | MatDialogRef and MAT_DIALOG_DATA providers |
 
-For end-to-end (e2e) testing, run:
+## 🛢 State Management
 
-```bash
-ng e2e
-```
+No external state management library. State is handled entirely with Angular Signals:
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- `signal()` for mutable state
+- `computed()` for derived state (KPIs, filters, totals)
+- `effect()` for side effects (loading transactions when accounts change)
 
-## Additional Resources
+## 🎨 Theming
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Automatic theme switching based on time of day:
+
+- Light theme → 06:00–18:00
+- Dark theme → 18:00–06:00
+
+Manual override available via toggle in the header.
+
+## 📊 Charts
+
+Dashboard includes three Chart.js visualisations:
+
+- Receitas vs Despesas (bar chart by month)
+- Despesas por categoria (doughnut chart)
+- Evolução do saldo (line chart)
+
+All charts adapt colours reactively when the theme changes.
+
+## 🛠 Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| Framework | Angular 21.2.4 |
+| Reactivity | Angular Signals (zoneless) |
+| UI | Angular Material M3 |
+| Charts | Chart.js 4.5.1 + ng2-charts |
+| Date handling | date-fns 4.1.0 |
+| Testing | Vitest 4.1.0 |
+| Runtime | Node.js 22.22.1 |
+
+## ⚙️ Design Decisions
+
+**Why Signals instead of RxJS for state?**
+Signals provide fine-grained reactivity without the overhead of Zone.js. In a zoneless application, Signals are the native change detection mechanism — components update only when the specific Signal they read actually changes, not on every async event.
+
+**Why no NgModules?**
+Angular 21 defaults to standalone components. Removing NgModules reduces boilerplate, improves tree-shaking and makes each component's dependencies explicit in its own `imports` array.
+
+**Why localStorage for user persistence?**
+The application has no authentication layer — users come from an external API (JSONPlaceholder). Persisting the selected user in localStorage avoids forcing the user to re-select on every page refresh while keeping the implementation simple and framework-free.
+
+**Why a race condition guard in services?**
+HTTP responses can arrive out of order when the user switches context quickly. Each service tracks the last requested ID and discards responses that no longer match — preventing stale data from overwriting the current state.
+
+**Why glassmorphism for the sidebar?**
+`backdrop-filter: blur()` with a semi-transparent background creates visual depth without heavy colour contrast. The sidebar floats over the content rather than pushing it, which gives the layout a more modern and spacious feel.
+
+## 🔭 Future Improvements
+
+- Route-level loading skeletons
+- Reports feature (pending backend JasperReports integration)
+- E2E tests with Playwright
+- Docker Compose integration with backend
+
+## 👩‍💻 Author
+
+Camila G. K. Santos — Frontend Developer
+
+LinkedIn: https://www.linkedin.com/in/camilagksantos
+
+This project is part of a portfolio series focused on modern frontend architecture and Angular best practices.
