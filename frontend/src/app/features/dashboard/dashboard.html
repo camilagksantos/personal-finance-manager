@@ -38,7 +38,7 @@
         <div class="user-selector">
             <mat-form-field appearance="outline">
                 <mat-label>Utilizador</mat-label>
-                <mat-select [value]="userService.currentUser()" (selectionChange)="onUserChange($event.value)">
+                <mat-select panelClass="user-select-panel" [value]="userService.currentUser()" (selectionChange)="onUserChange($event.value)">
                     @for (user of userService.users(); track user.id) {
                     <mat-option [value]="user">{{ user.name }}</mat-option>
                     }

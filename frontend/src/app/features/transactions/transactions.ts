@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, signal, computed } from '@angular/core';
+import { Component, inject, OnInit, signal, computed, effect } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -123,6 +123,19 @@ export class Transactions implements OnInit {
     return this.categoryService.categories().find(c => c.id === categoryId)?.name ?? categoryId;
   };
 
+  constructor() {
+    effect(() => {
+      const accounts = this.accountService.accounts();
+      if (!accounts.length) return;
+
+      this.transactionService.transactions.set([]);
+
+      accounts.forEach(acc => {
+        this.transactionService.loadByAccount(acc.id);
+      });
+    });
+  }
+
   ngOnInit(): void {
     const user = this.userService.currentUser();
     if (!user) return;
@@ -161,6 +174,7 @@ export class Transactions implements OnInit {
   protected onAccountFilterChange(accountId: string): void {
     this.selectedAccountId.set(accountId);
     if (accountId) {
+      this.transactionService.transactions.set([]);
       this.transactionService.loadByAccount(accountId);
     }
   }
@@ -219,5 +233,22 @@ export class Transactions implements OnInit {
 
   protected getTypeLabel(type: string): string {
     return this.transactionTypeLabels[type as TransactionType] ?? type;
+  }
+
+  private waitAndLoadTransactions(): void {
+    const interval = setInterval(() => {
+      const accounts = this.accountService.accounts();
+
+      if (!accounts.length) return;
+
+      clearInterval(interval);
+
+      this.transactionService.transactions.set([]);
+
+      accounts.forEach(acc => {
+        this.transactionService.loadByAccount(acc.id);
+      });
+
+    }, 100);
   }
 }

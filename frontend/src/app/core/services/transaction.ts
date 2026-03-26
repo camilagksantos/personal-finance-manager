@@ -13,8 +13,6 @@ export class Transaction {
   readonly loading = signal<boolean>(false);
   readonly error = signal<string | null>(null);
 
-  private currentAccountId: string | null = null;
-
   readonly totalIncome = computed(() =>
     this.transactions()
       .filter(t => t.type === 'INCOME')
@@ -28,18 +26,15 @@ export class Transaction {
   );
 
   loadByAccount(accountId: string): void {
-    this.currentAccountId = accountId;
     this.loading.set(true);
     this.error.set(null);
 
     this.http.get<TransactionResponse[]>(`${environment.apiUrl}/transactions/account/${accountId}`).subscribe({
       next: (data) => {
-        if (this.currentAccountId !== accountId) return;
         this.transactions.set(data);
         this.loading.set(false);
       },
       error: () => {
-        if (this.currentAccountId !== accountId) return;
         this.error.set('Erro ao carregar transacções');
         this.loading.set(false);
       }
@@ -47,7 +42,6 @@ export class Transaction {
   }
 
   loadByAccountAndPeriod(accountId: string, startDate: string, endDate: string): void {
-    this.currentAccountId = accountId;
     this.loading.set(true);
     this.error.set(null);
 
@@ -56,12 +50,10 @@ export class Transaction {
       { params: { startDate, endDate } }
     ).subscribe({
       next: (data) => {
-        if (this.currentAccountId !== accountId) return;
         this.transactions.set(data);
         this.loading.set(false);
       },
       error: () => {
-        if (this.currentAccountId !== accountId) return;
         this.error.set('Erro ao carregar transacções');
         this.loading.set(false);
       }
