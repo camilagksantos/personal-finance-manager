@@ -82,6 +82,34 @@
         </div>
     </section>
 
+    <section class="charts">
+        <div class="chart-grid">
+            <div class="chart-card chart-card--bar">
+                <h3>Receitas vs Despesas</h3>
+                <div class="chart-wrapper">
+                    <canvas baseChart [data]="barChartData()" [options]="chartOptions()" type="bar">
+                    </canvas>
+                </div>
+            </div>
+    
+            <div class="chart-card chart-card--donut">
+                <h3>Despesas por categoria</h3>
+                <div class="chart-wrapper">
+                    <canvas baseChart [data]="donutChartData()" [options]="donutOptions()" type="doughnut">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    
+        <div class="chart-card chart-card--line">
+            <h3>Evolução do saldo</h3>
+            <div class="chart-wrapper">
+                <canvas baseChart [data]="lineChartData()" [options]="chartOptions()" type="line">
+                </canvas>
+            </div>
+        </div>
+    </section>
+
     <section class="recent">
         <h2>Actividade recente</h2>
         @if (recentTransactions().length === 0) {
