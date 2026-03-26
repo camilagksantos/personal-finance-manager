@@ -52,6 +52,7 @@ export class AccountFormDialog implements OnInit {
         type: this.data.account.type,
         balance: this.data.account.balance
       });
+      this.form.get('balance')?.disable();
     }
   }
 

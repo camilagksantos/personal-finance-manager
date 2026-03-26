@@ -264,34 +264,3 @@
         gap: var(--finance-spacing-sm);
     }
 }
-
-:host ::ng-deep .user-select-panel {
-    background: var(--finance-surface);
-    backdrop-filter: blur(16px);
-    border-radius: 12px;
-}
-
-.user-select-panel .mat-mdc-option {
-    border-radius: 8px;
-    margin: 2px 4px;
-    transition: background var(--finance-transition), transform var(--finance-transition);
-
-    &:hover {
-        background: rgba(255, 255, 255, 0.06);
-        transform: translateX(2px);
-    }
-}
-
-.user-select-panel .mat-mdc-option.mdc-list-item--selected {
-    background: var(--finance-primary-soft);
-    color: var(--finance-primary-light);
-}
-
-.user-select-panel::-webkit-scrollbar {
-    width: 6px;
-}
-
-.user-select-panel::-webkit-scrollbar-thumb {
-    background: rgba(100, 116, 139, 0.3);
-    border-radius: 6px;
-}

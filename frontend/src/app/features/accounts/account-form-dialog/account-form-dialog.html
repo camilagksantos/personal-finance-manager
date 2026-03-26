@@ -26,8 +26,20 @@
             <mat-form-field appearance="outline">
                 <mat-label>Saldo inicial</mat-label>
                 <input matInput type="number" formControlName="balance" min="0" />
-                @if (form.get('balance')?.hasError('min')) {
-                <mat-error>Saldo deve ser zero ou positivo</mat-error>
+                @if (isEdit()) {
+                <div class="balance-info">
+                    <span class="balance-label">Saldo actual</span>
+                    <strong class="balance-value">€{{ data.account!.balance.toLocaleString() }}</strong>
+                    <small class="balance-hint">O saldo é actualizado automaticamente através das transacções</small>
+                </div>
+                } @else {
+                <mat-form-field appearance="outline">
+                    <mat-label>Saldo inicial</mat-label>
+                    <input matInput type="number" formControlName="balance" min="0" />
+                    @if (form.get('balance')?.hasError('min')) {
+                    <mat-error>Saldo deve ser zero ou positivo</mat-error>
+                    }
+                </mat-form-field>
                 }
             </mat-form-field>
         </form>

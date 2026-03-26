@@ -22,3 +22,58 @@ body {
   margin: 0;
   height: 100%;
 }
+
+.mat-mdc-select-panel {
+  background: var(--finance-surface) !important;
+  backdrop-filter: blur(16px) !important;
+  border-radius: 12px !important;
+}
+
+.mat-mdc-option {
+  border-radius: 8px;
+  margin: 2px 4px;
+  transition: background var(--finance-transition), transform var(--finance-transition);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.06) !important;
+    transform: translateX(2px);
+  }
+
+  &.mdc-list-item--selected {
+    background: var(--finance-primary-soft) !important;
+    color: var(--finance-primary-light) !important;
+  }
+}
+
+.mat-datepicker-content {
+  background: var(--finance-surface) !important;
+  backdrop-filter: blur(16px) !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--finance-border) !important;
+  box-shadow: var(--finance-shadow-glass) !important;
+}
+
+.mat-calendar-body-selected {
+  background-color: var(--finance-primary) !important;
+}
+
+.mat-calendar-body-cell:hover .mat-calendar-body-cell-content {
+  background: var(--finance-primary-soft) !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.3);
+  border-radius: 6px;
+
+  &:hover {
+    background: rgba(100, 116, 139, 0.5);
+  }
+}

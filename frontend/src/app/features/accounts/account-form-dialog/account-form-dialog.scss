@@ -12,3 +12,30 @@
         width: 100%;
     }
 }
+
+.balance-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: var(--finance-spacing-md);
+    background: var(--finance-primary-soft);
+    border: 1px solid var(--finance-border);
+    border-radius: var(--finance-radius-md);
+}
+
+.balance-label {
+    font-size: var(--finance-font-xs);
+    color: var(--finance-text-muted);
+}
+
+.balance-value {
+    font-size: var(--finance-font-lg);
+    font-weight: var(--finance-weight-bold);
+    color: var(--finance-text);
+}
+
+.balance-hint {
+    font-size: var(--finance-font-xs);
+    color: var(--finance-text-muted);
+    margin-top: 2px;
+}
